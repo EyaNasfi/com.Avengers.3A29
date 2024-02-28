@@ -21,9 +21,12 @@ public interface IService <T> {
 
     void update(T t, int id) throws SQLException;
 
+
     void delete(int id) throws SQLException;
 
     public ObservableList<T> getAll() throws SQLException;
+
+    ObservableList<Questions> get() throws SQLException;
 
     T getById(int id) throws  SQLException;
 

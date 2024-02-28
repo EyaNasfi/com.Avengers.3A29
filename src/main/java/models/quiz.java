@@ -5,7 +5,15 @@ import java.util.List;
 public class quiz {
     int idquiz;
 
-   String nom;
+    @Override
+    public String toString() {
+        return "quiz{" +
+                "nom='" + nom + '\'' +
+                ", nbrquest=" + nbrquest +
+                '}';
+    }
+
+    String nom;
     int nbrquest;
     int ID_de_Formation;
     int iduser;

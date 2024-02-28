@@ -18,13 +18,37 @@ package Controllers;
     import javafx.scene.Scene;
     import javafx.scene.layout.AnchorPane;
     import javafx.stage.Stage;
+
+    import javax.imageio.IIOParam;
     import java.awt.event.MouseEvent;
+    import java.io.BufferedReader;
     import java.io.IOException;
+    import java.io.InputStreamReader;
+    import java.net.URL;
+    import java.net.URLConnection;
+    import java.net.URLEncoder;
     import java.sql.SQLException;
     import java.util.List;
+    import java.util.Objects;
+// Install the Java helper library from twilio.com/docs/java/install
 
+    import com.twilio.Twilio;
+    import com.twilio.rest.api.v2010.account.Message;
+    import com.twilio.type.PhoneNumber;
+
+    import java.net.URI;
+    import java.util.Arrays;
+
+
+    import java.io.BufferedReader;
+    import java.io.InputStreamReader;
+    import java.io.OutputStreamWriter;
+    import java.net.URL;
+    import java.net.URLConnection;
+    import java.net.URLEncoder;
 
 public class ajouterreclamation {
+
 
     @FXML
     private TextField titre;
@@ -63,13 +87,15 @@ public class ajouterreclamation {
 
     }
 
-
+    @FXML
+    void initialize() throws SQLException {affichage();}
     @FXML
     void ajouter(ActionEvent event) throws SQLException {
 
 
         try {
             rs.add1((new Reclamation(titre.getText(), description.getText())));
+
             affichage();
             // rs.getAll(new Reclamation(titre.getText(), description.getText()));
             // rs.getAll(new Reclamation());
@@ -77,48 +103,20 @@ public class ajouterreclamation {
             throw new RuntimeException(e);
         }
 
+
         //""""" idt.setCellFactory(new PropertyValueFactory<Reclamation,Integer>("id"));
 
 
     }
 
-    @FXML
-    void supprimer(ActionEvent event) throws SQLException {
 
 
-        Reclamation r = affiche.getSelectionModel().getSelectedItem();
-        rs.delete(r.getId());
-        affichage();
-
-    }
-
-
-
-
-  /*  @FXML
-    void njareb(MouseEvent event) throws SQLException {
-
-    }*/
-  @FXML
-  void njareb(ActionEvent event) {
-
-  }
     @FXML
     void update(ActionEvent event) throws SQLException {
 
 
         Reclamation r = affiche.getSelectionModel().getSelectedItem();
 
-        //update();
-        //titre.setText(r.getTitre());
-        // String d;
-        //description.setText(r.getDescription());
-       /* String d= descriptiont.getText();
-        String t=titret.getText();
-
-        rs.update(r,r.getId());
-        System.out.println(r.getId());
-*/
         String t=titre.getText();
         String d=description.getText();
         Reclamation re=new Reclamation(t,d);
@@ -132,17 +130,21 @@ public class ajouterreclamation {
 
 
 
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/nvquiz.fxml"));
 
-        Parent root = FXMLLoader.load(getClass().getResource("/quiz.fxml"));
+        Parent root = loader.load();
         stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
        scene =new Scene(root);
        stage.setScene(scene);
        stage.show();
-     ///  if(event.isConsumed())
+
+
+        ///  if(event.isConsumed())
 
 
 
     }
+
     public void select() throws SQLException {
 
 
@@ -155,7 +157,53 @@ public class ajouterreclamation {
     }
 
 
-    public void ajout(ActionEvent actionEvent) {
+    @FXML
+  public   void sms(ActionEvent event) {
+
+        sendSms();
+
+    }
+
+
+
+        public String sendSms() {
+            try {
+                // Construct data
+                String apiKey = "apikey=" + URLEncoder.encode("yourapiKey", "UTF-8");
+                String message = "&message=" + URLEncoder.encode("This is your message", "UTF-8");
+                String sender = "&sender=" + URLEncoder.encode("Jims Autos", "UTF-8");
+                String numbers = "&numbers=" + URLEncoder.encode("447123456789", "UTF-8");
+
+
+                // Send data
+                String data = "https://api.txtlocal.com/send/?" + "NTk0MjZiNzY1NjZhNTM3MTQ5NjQ0NjM3NzMzOTRjNDY "+21782711 + description.getText() +"eya";
+                URL url = new URL(data);
+                URLConnection conn = url.openConnection();
+                conn.setDoOutput(true);
+
+                // Get the response
+                BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                String line;
+                String sResult="";
+                while ((line = rd.readLine()) != null) {
+                    // Process line...
+                    sResult=sResult+line+" ";
+                }
+                rd.close();
+
+                return sResult;
+            } catch (Exception e) {
+                System.out.println("Error SMS "+e);
+                return "Error "+e;
+            }
+        }
+
+
+    public void supp(ActionEvent actionEvent) throws SQLException {
+        Reclamation r = affiche.getSelectionModel().getSelectedItem() ;
+        System.out.println(r.getId());
+        rs.delete(r.getId());
+        affichage();
     }
 }
 

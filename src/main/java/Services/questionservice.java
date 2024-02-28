@@ -15,41 +15,6 @@ public class questionservice implements IService<Questions> {
         connection = mydb.getInstance().getCnx();
     }
 
-
-
-
-
-
-
-    /* @Override
-     public int add0(quiz q) throws SQLException {
-         String sql = "INSERT INTO quiz (nom,nbrquest,ID_de_Formation,iduser) VALUES (?,?,1,1)";
-         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-         ps.setString(1, q.getNom());
-         ps.setString(2, String.valueOf(q.getNbrquest()));
-         ps.executeUpdate();
-
-         /*ps.setString(3, String.valueOf(q.getID_de_Formation()));
-         ps.setString(4, String.valueOf(q.getIduser()));*/
-      /*  ResultSet generatedKeys = ps.getGeneratedKeys();
-        int idQuiz;
-        if (generatedKeys.next()) {
-            idQuiz = generatedKeys.getInt(1);
-            System.out.println("ID du quiz inséré : " + idQuiz);
-        } else {
-            throw new SQLException("Impossible de récupérer l'ID du quiz inséré.");
-        }
-
-        generatedKeys.close();
-        ps.close();
-        return idQuiz;
-    }
-*/
-   /* @Override
-    public void add1(Questions questions) throws SQLException {
-
-    }*/
-
     public void add1(Questions questions) throws SQLException {
        // int idQuiz = add0(questions.getQuiz());
         quizservice qu=new quizservice() {
@@ -80,9 +45,9 @@ public class questionservice implements IService<Questions> {
         preparedStatement.setString(1, questions.getOp1());
         preparedStatement.setString(2, questions.getOp2());
         preparedStatement.setString(3,questions.getOp3());
-        preparedStatement.setString(5,questions.getQuestion());
         preparedStatement.setString(4,questions.getAnswer());
-        preparedStatement.setInt(6,1);
+        preparedStatement.setString(5,questions.getQuestion());
+        preparedStatement.setInt(6,questions.getIdquiz());
         preparedStatement.setInt(7,1);
         preparedStatement.setInt(8,id);
         preparedStatement.executeUpdate();
@@ -100,18 +65,21 @@ public class questionservice implements IService<Questions> {
     @Override
     public ObservableList<Questions> getAll() throws SQLException {
         ObservableList<Questions>list = FXCollections.observableArrayList();
-        String sql ="SELECT* FROM questions WHERE iduser=1";
+        String sql ="SELECT questions.idquest,questions.op1,questions.op2,questions.op3,questions.answer,questions.question,quiz.nom,quiz.nbrquest,quiz.idquiz from questions INNER JOIN quiz on questions.idquiz=quiz.idquiz WHERE questions.iduser=1";
         Statement stat = connection.prepareStatement(sql);
         ResultSet rs= stat.executeQuery(sql);
         while (rs.next())
         {
            Questions q=new Questions();
+
             q.setIdquest(rs.getInt("idquest"));
             q.setOp1(rs.getString("op1"));
             q.setOp2(rs.getString("op2"));
             q.setOp3(rs.getString("op3"));
             q.setAnswer(rs.getString("answer"));
             q.setQuestion(rs.getString("question"));
+            q.setNom(rs.getString("nom"));
+            q.setNbrquest(rs.getInt("nbrquest"));
             q.setIdquiz(rs.getInt("idquiz"));
 
             //q.setUser.g("1");//q.setDescription(rs.getString("description"));
@@ -119,7 +87,31 @@ public class questionservice implements IService<Questions> {
         }
         return list;
     }
+    @Override
+    public ObservableList<Questions> get() throws SQLException {
+        ObservableList<Questions>list = FXCollections.observableArrayList();
+        String sql ="SELECT questions.idquest,questions.op1,questions.op2,questions.op3,questions.question,questions.idquiz from questions WHERE questions.iduser=1";
+        Statement stat = connection.prepareStatement(sql);
+        ResultSet rs= stat.executeQuery(sql);
+        while (rs.next())
+        {
+            Questions q=new Questions();
 
+            q.setIdquest(rs.getInt("idquest"));
+            q.setOp1(rs.getString("op1"));
+            q.setOp2(rs.getString("op2"));
+            q.setOp3(rs.getString("op3"));
+          ///  q.setAnswer(rs.getString("answer"));
+            q.setQuestion(rs.getString("question"));
+          ///  q.setNom(rs.getString("nom"));
+          ///  q.setNbrquest(rs.getInt("nbrquest"));
+            q.setIdquiz(rs.getInt("idquiz"));
+
+            //q.setUser.g("1");//q.setDescription(rs.getString("description"));
+            list.add(q);
+        }
+        return list;
+    }
     @Override
     public Questions getById(int id) throws SQLException {
         return null;

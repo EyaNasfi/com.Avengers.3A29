@@ -10,10 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import models.quiz;
@@ -61,66 +58,91 @@ public class quizcontroller {
         nom.setText(q.getNom());
         nbrquest.setText(String.valueOf(q.getNbrquest()));
     }
+
+    private void affichage() throws SQLException {
+        //quiz quiz=new quiz();
+        ObservableList<quiz> qui = qs.getAll();
+        affiche.setItems(qui);
+
+        nomtab.setCellValueFactory(new PropertyValueFactory<quiz, String>("nom"));
+        nbrtab.setCellValueFactory(new PropertyValueFactory<quiz, Integer>("nbrquest"));
+
+    }
     @FXML
-    void initialize() {affiche.setOnMouseClicked(event -> {
+    void initialize() throws SQLException {affiche.setOnMouseClicked(event -> {
         try {
             select();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     });
-        affiche.setItems(FXCollections.observableArrayList());
+    affichage();
+        //affiche.setItems(FXCollections.observableArrayList());
+        affiche.getItems();
 
     }
-        private void affichage() throws SQLException {
-            //quiz quiz=new quiz();
-            ObservableList<quiz> qui = qs.getAll();
-            affiche.setItems(qui);
 
-            nomtab.setCellValueFactory(new PropertyValueFactory<quiz, String>("nom"));
-            nbrtab.setCellValueFactory(new PropertyValueFactory<quiz, Integer>("nbrquest"));
-
-        }
 
     public void ajout(ActionEvent actionEvent) throws SQLException, IOException {
         String t = nom.getText();
         int n = Integer.parseInt(nbrquest.getText());
-
-
-        if (n > 10) {
-            System.out.println("entrer une nbr moins de 10");
-
-        } else {
-
-               // FXMLLoader loader = null;
-                if (!t.trim().isEmpty() ) {
-
+        if(!(t.equals(affiche.getSelectionModel().getSelectedItem().getNom()))) {
+            if ((n < 10) && (n > 0)) {
+                if (!(t.trim().isEmpty() || (nbrquest.getText().isEmpty()))) {
                     quiz qz = new quiz(t, n);
                     qs.add1(qz);
-                }}
-            if (t.trim().isEmpty()) {
+                }else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("failed");
+                    alert.setContentText("ce nom est vide ");
+                    alert.showAndWait();
+                    //System.out.println("nom existe ");
+                }
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("failed");
+                alert.setContentText("le nbr de questions est entre 1 et 9 ");
+                alert.showAndWait();
+                System.out.println("nom existe ");
 
-                System.out.println("le nom de quiz svp");
-            }
+                }
+                affichage();
+                // FXMLLoader loader = null;
 
+            }else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("failed");
+            alert.setContentText("ce nom de quiz existe deja ");
+            alert.showAndWait();
+            System.out.println("nom existe ");
+        }
         }
     @FXML
-    void passer(ActionEvent event) throws IOException {
-        if(!affiche.getItems().isEmpty()){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/questions1.fxml"));
-        Parent root = loader.load();
-        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        st.setScene(scene);
-        st.show();
-        retourner();
-        System.out.println(retourner());
+    void passer(ActionEvent event) throws IOException, SQLException {
+        if (!selectyyy()) {
+            affiche.getSelectionModel().getSelectedIndex();
+
+
+            System.out.println("select quiz");}
+
+        else{
+           affiche.getSelectionModel().getSelectedItem();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/questions1.fxml"));
+            Parent root = loader.load();
+            Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            st.setScene(scene);
+            st.show();
+            retourner();
+            returnnbrquest();
+            System.out.println(retourner());
+            System.out.println(returnnbrquest());
+            questions nb=loader.getController();
+            nb.setNbrquestt(returnnbrquest());
             questions irc=loader.getController();
             irc.setIdd(retourner());
-    }
-    else {
-            System.out.println("problemaaaaaaaaaa");}
-    }
+
+    }}
 
     @FXML
     void affich(ActionEvent event) throws SQLException {
@@ -129,17 +151,29 @@ public class quizcontroller {
 
 
     }
+    public boolean selectyyy() throws SQLException {
+        if (!affiche.getSelectionModel().getSelectedItems().isEmpty()) {
+            return true;
+        }
+        return false;
+    }
     @FXML
     void modifier(ActionEvent event) throws SQLException {
         quiz quii  = affiche.getSelectionModel().getSelectedItem();
         //select();
-
+        if (selectyyy()) {
                 String t = nom.getText();
         int d = Integer.parseInt(nbrquest.getText());
         quiz qu = new quiz(t, d);
         System.out.println(quii.getIdquiz());
         qs.update(qu, quii.getIdquiz());
-        affichage();
+        affichage();}
+        else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("failed");
+            alert.setContentText("selectionner une case ");
+            alert.showAndWait();
+        }
 
 
 
@@ -152,18 +186,38 @@ public class quizcontroller {
         }
       // quiz q = affiche.getItems().get(affiche.getSelectionModel().getSelectedIndex());
        // System.out.println(q.getIdquiz());
+public int returnnbrquest(){
+    return affiche.getItems().get(affiche.getSelectionModel().getSelectedIndex()).getNbrquest();
 
+}
 
+    @FXML
+    void rec(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/reclamationadmin.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
 
+    }
     public int retourn(int id){
         return id;
     }
 
     @FXML
     void supp(ActionEvent event) throws SQLException {
+        if (selectyyy()) {
        quiz qu = affiche.getSelectionModel().getSelectedItem();
+        System.out.println(qu.getIdquiz());
         qs.delete(qu.getIdquiz());
-        affichage();
+        affichage();}
+         else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("failed");
+            alert.setContentText("selectionner une ligne ");
+            alert.showAndWait();
+        }
     }
 
 }

@@ -2,12 +2,14 @@ package Services;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+import models.Questions;
 import models.quiz;
 import utils.mydb;
 
 import java.sql.*;
 
-public abstract class quizservice implements IService<quiz> {
+public class quizservice implements IService<quiz> {
 
     public quizservice(){
         connection = mydb.getInstance().getCnx();
@@ -27,6 +29,10 @@ public abstract class quizservice implements IService<quiz> {
         ps.setString(2, String.valueOf(q.getNbrquest()));
 
         ps.executeUpdate();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Success");
+        alert.setContentText("quiz ajouté");
+        alert.showAndWait();
     }
 
 
@@ -45,7 +51,11 @@ public abstract class quizservice implements IService<quiz> {
         preparedStatement.setInt(4,1);
         preparedStatement.setInt(5,id);
         preparedStatement.executeUpdate();
-        System.out.println("quiz modifiée");
+        System.out.println("quiz modifiée ");
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Success");
+        alert.setContentText("quiz modifiée");
+        alert.showAndWait();
     }
 
 
@@ -74,6 +84,11 @@ public abstract class quizservice implements IService<quiz> {
             list.add(q);
         }
         return list;
+    }
+
+    @Override
+    public ObservableList<Questions> get() throws SQLException {
+        return null;
     }
 
     @Override

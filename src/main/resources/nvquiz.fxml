@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,7 +11,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.quizcontroller">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.quiz">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -92,51 +90,19 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Label layoutX="199.0" layoutY="11.0" prefHeight="17.0" prefWidth="191.0" text="Ajouter un quiz" textFill="#151c5c">
-                     <font>
-                        <Font name="Berlin Sans FB" size="15.0" />
-                     </font>
-                  </Label>
                   <Label layoutX="217.0" layoutY="136.0" />
-                  <Button layoutX="459.0" layoutY="12.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajout" prefHeight="33.0" prefWidth="180.0" style="-fx-background-radius: 20;" text="ajouter un autre question" />
-                  <TextField fx:id="titre" layoutX="233.0" layoutY="37.0" prefHeight="31.0" prefWidth="287.0" promptText="nom" />
-                  <TextField layoutX="199.0" layoutY="74.0" prefHeight="64.0" prefWidth="433.0" promptText="question" />
-                  <VBox layoutX="191.0" layoutY="129.0" prefHeight="204.0" prefWidth="341.0">
-                     <children>
-                        <TextField promptText="option1">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="51.0" right="50.0" top="10.0" />
-                           </VBox.margin>
-                        </TextField>
-                        <TextField promptText="option2">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
-                           </VBox.margin>
-                        </TextField>
-                        <TextField prefHeight="26.0" prefWidth="157.0" promptText="option3">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
-                           </VBox.margin>
-                        </TextField>
-                        <TextField promptText="option4">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
-                           </VBox.margin>
-                        </TextField>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
-                     </padding>
-                  </VBox>
-                  <RadioButton fx:id="option1" layoutX="199.0" layoutY="349.0" mnemonicParsing="false" text="option1" />
-                  <RadioButton fx:id="option2" layoutX="308.0" layoutY="354.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="option2" />
-                  <RadioButton fx:id="option3" layoutX="417.0" layoutY="354.0" mnemonicParsing="false" text="option3" />
-                  <RadioButton fx:id="option4" layoutX="528.0" layoutY="355.0" mnemonicParsing="false" text="option4" />
-                  <Label layoutX="199.0" layoutY="324.0" prefHeight="17.0" prefWidth="191.0" text="Selectionner la bonne reponse" textFill="#151c5c">
-                     <font>
-                        <Font name="Berlin Sans FB" size="15.0" />
-                     </font>
-                  </Label>
+                  <ScrollPane layoutX="189.0" layoutY="37.0" prefHeight="367.0" prefWidth="461.0" style="-fx-background-color: transparent;">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="387.0" prefWidth="455.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <VBox fx:id="pnitems" prefHeight="390.0" prefWidth="461.0" style="-fx-background-color: transparent;" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Label layoutX="208.0" layoutY="14.0" text="nom" />
+                  <Label layoutX="327.0" layoutY="14.0" text="nombre questions" />
+                  <Label fx:id="lancer" layoutX="560.0" layoutY="14.0" text="lancer" />
                </children>
             </Pane>
       </children>

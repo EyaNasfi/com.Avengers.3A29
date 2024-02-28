@@ -32,7 +32,7 @@
                            </image>
                         </ImageView>
                         <Button layoutX="6.0" layoutY="118.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="175.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Gestion des salles" />
-                        <Button layoutX="4.0" layoutY="199.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Gestion des reclamations" />
+                        <Button layoutX="4.0" layoutY="199.0" mnemonicParsing="false" onAction="#rec" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Gestion des reclamations" />
                         <Button layoutX="4.0" layoutY="159.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="177.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Gestion des évenements" />
                         <Button layoutX="6.0" layoutY="237.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="177.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestion des quizs" />
                         <Label layoutX="2.0" layoutY="28.0" prefHeight="11.0" prefWidth="81.0" text="9ariny-Academy" textFill="#151c5c">
@@ -99,20 +99,19 @@
                   </Label>
                   <Label layoutX="206.0" layoutY="81.0" text="nom:" />
                   <Label layoutX="217.0" layoutY="136.0" />
-                  <Button layoutX="217.0" layoutY="146.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajout" prefHeight="33.0" prefWidth="78.0" style="-fx-background-radius: 20;" text="Envoyer" />
+                  <Button layoutX="250.0" layoutY="140.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ajout" prefHeight="27.0" prefWidth="81.0" style="-fx-background-radius: 20;" text="Envoyer" />
                   <TextField fx:id="nom" layoutX="239.0" layoutY="73.0" prefHeight="26.0" prefWidth="102.0" />
-                  <Button layoutX="314.0" layoutY="147.0" mnemonicParsing="false" onAction="#modifier" prefHeight="31.0" prefWidth="81.0" style="-fx-background-radius: 20;" text="modifier" />
-                  <TextField fx:id="nbrquest" layoutX="507.0" layoutY="76.0" prefHeight="31.0" prefWidth="102.0" promptText="nbrquest" />
-                  <Label layoutX="429.0" layoutY="81.0" prefHeight="21.0" prefWidth="102.0" text="nbr quest" />
-                  <TableView fx:id="affiche" layoutX="306.0" layoutY="241.0" prefHeight="129.0" prefWidth="155.0">
+                  <Button layoutX="344.0" layoutY="140.0" mnemonicParsing="false" onAction="#modifier" prefHeight="31.0" prefWidth="81.0" style="-fx-background-radius: 20;" text="modifier" />
+                  <TextField fx:id="nbrquest" layoutX="479.0" layoutY="76.0" prefHeight="31.0" prefWidth="102.0" promptText="nbrquest" />
+                  <Label layoutX="400.0" layoutY="78.0" prefHeight="21.0" prefWidth="102.0" text="nbr quest" />
+                  <TableView fx:id="affiche" layoutX="213.0" layoutY="243.0" prefHeight="142.0" prefWidth="246.0">
                     <columns>
-                      <TableColumn fx:id="nomtab" prefWidth="75.0" text="nom" />
-                      <TableColumn fx:id="nbrtab" prefWidth="75.0" text="nbrquest" />
+                      <TableColumn fx:id="nomtab" prefWidth="111.0" text="nom" />
+                      <TableColumn fx:id="nbrtab" prefWidth="134.0" text="nbrquest" />
                     </columns>
                   </TableView>
-                  <Button layoutX="513.0" layoutY="315.0" mnemonicParsing="false" onAction="#supp" prefHeight="33.0" prefWidth="91.0" style="-fx-background-radius: 20;" text="supprimer" />
-                  <Button layoutX="503.0" layoutY="273.0" mnemonicParsing="false" onAction="#affich" prefHeight="33.0" prefWidth="117.0" style="-fx-background-radius: 20;" text="liste des quizs" />
-                  <Button layoutX="263.0" layoutY="203.0" mnemonicParsing="false" onAction="#passer" text="passer" />
+                  <Button layoutX="434.0" layoutY="141.0" mnemonicParsing="false" onAction="#supp" prefHeight="31.0" prefWidth="91.0" style="-fx-background-radius: 20;" text="supprimer" />
+                  <Button layoutX="482.0" layoutY="327.0" mnemonicParsing="false" onAction="#passer" style="-fx-background-radius: 20;" text="passer aux questions" />
                </children>
             </Pane>
       </children>

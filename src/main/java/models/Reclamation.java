@@ -2,6 +2,16 @@ package models;
 
 public class Reclamation {
     private int id;
+
+    public void setIduser(int iduser) {
+        this.iduser = iduser;
+    }
+
+    public int getIduser() {
+        return iduser;
+    }
+
+    private int iduser;
     private String titre;
     private String description;
     public Reclamation(int id, String titre, String description) {
@@ -34,8 +44,7 @@ public class Reclamation {
     }
     public String toString() {
         return "Reclamation{" +
-                "id=" + id +
-                ", titre='" + titre + '\'' +
+                " titre='" + titre + '\'' +
                 ", description='" + description + '\'' +
                 '}';
     }

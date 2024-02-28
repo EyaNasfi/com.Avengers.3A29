@@ -1,6 +1,7 @@
 package Controllers;
 
 import Services.questionservice;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,14 +11,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import models.Questions;
-import Controllers.quizcontroller.*;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.*;
 //package Controllers;
-import Controllers.quizcontroller;
-import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import models.quiz;
 
@@ -39,28 +36,58 @@ public class questions {
         return idd;
     }
 
-
+    @FXML
+        private ComboBox<String> answerbox;
 
     public void setIdd(int idd) {
         this.idd = idd;
     }
 
+    public void setNbrquestt(int nbrquestt) {
+        this.nbrquestt = nbrquestt;
+    }
+
+    public int getNbrquestt() {
+        return nbrquestt;
+    }
+
+    private int nbrquestt;
+
     public int idd;
     quizcontroller qz=new quizcontroller();
 
-    @FXML
-        private TextField ecrire11;
+    //@FXML
+        //private TextField ecrire11;
       //  private ArrayList<Questions>questions=new ArrayList<>();
       questionservice qs=new questionservice();
     //public class questions {
 
         @FXML
         void initialize () throws NoSuchFieldException {
+           answerbox.setVisible(false);
 
+           /// System.out.println(getAff());
 
         ///question.setText(String.valueOf(quizcontroller.class.getField(question.getId())));
         }
-
+    @FXML
+    void quiz(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/quiz.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
+    @FXML
+    void rec(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ajouterreclamation.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
 
 
         public void submit (ActionEvent actionEvent) throws SQLException, IOException {
@@ -72,50 +99,90 @@ public class questions {
             st.setScene(scene);
             st.show();
         }
-  /*  @FXML
-    void ajout( ActionEvent event) throws SQLException {
+   @FXML
+    void affi(ActionEvent event) {
+            answerbox.setVisible(true);
+       String qu = this.question.getText();
+       String op1 = this.ecrire1.getText();
+       String op2 = this.ecrire2.getText();
+       String op3 = this.ecrire3.getText();
+       answerbox.getItems().addAll(op1, op2, op3);
+       //answerbox.setItems(op1,op2,op3);
+       answerbox.getSelectionModel().getSelectedItem();
+       answerbox.getValue();
 
-
-        }
     }
-*/
-    @FXML
+
     public void ajout(ActionEvent actionEvent) throws SQLException, IOException {
+        quiz qui = new quiz();
+        affi(actionEvent);
+        getIdd();
+        answerbox.setVisible(true);
+        //System.out.println(qui.getNbrquest());
+        Questions q = new Questions();
+        for (int i = 0; i < getNbrquestt(); i++) {
+                if (!(i > getNbrquestt())) {
+                    String qu = this.question.getText();
+                    String op1 = this.ecrire1.getText();
+                    String op2 = this.ecrire2.getText();
+                    String op3 = this.ecrire3.getText();
 
-        quiz qui=new quiz();
 
-        for (int i=0;i<=qui.getNbrquest();i++){
-            String qu = this.question.getText();
-            String op1 = this.ecrire1.getText();
-            String op2 = this.ecrire2.getText();
-            String op3 = this.ecrire3.getText();
-            String an = this.ecrire11.getText();
+                    //  System.out.println(Integer.parseInt(q.getQuestion()));
+                    answerbox.getItems().addAll(op1, op2, op3);
+                    //answerbox.setItems(op1,op2,op3);
+                    answerbox.getSelectionModel().getSelectedItem();
+                    answerbox.getValue();
+                    if (!qu.trim().isEmpty() || !op1.trim().isEmpty() || !op2.trim().isEmpty() || !op3.trim().isEmpty() || answerbox != null) {
+                        if (!(qu.endsWith("?"))) {
+                            String an = answerbox.getValue();
+                            int j = getIdd();
+                            Questions qq = new Questions(op1, op2, op3, an, qu, j);
+                            if ((!(op1 == op2) || !(op1 == op3) || !(op2 == op3))) {
+                                qs.add1(qq);
+                                System.out.println("ajout avec success");
+                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                                alert.setTitle("failed");
+                                alert.setContentText("ajout avec success ");
+                                alert.showAndWait();
+                                // questions.add(q);
+                                question.clear();
+                                ecrire1.clear();
+                                ecrire2.clear();
+                                ecrire3.clear();
+                                answerbox.getItems().clear();
+                            } else {
 
-            //setId_quiz(Integer.parseInt(String.valueOf(qz.retourner())));
-           if (!qu.trim().isEmpty()  && !op1.trim().isEmpty() && !op2.trim().isEmpty() && !op3.trim().isEmpty() &&!an.trim().isEmpty()) {   //  boolean valid = valider();
-                // Questions q = new Questions(question.getText(), ecrire1.getText(), ecrire2.getText(), ecrire3.getText(), ecrire11.getText());
-int j=getIdd();
-            System.out.println(getIdd());
-                        Questions qq=new Questions(op1, op2, op3, an, qu,j);
-                      //  cont.retourner();
-              //  System.out.println(cont.retourner());
-              // System.out.println(qq.getIdquiz());
+                                System.out.println("verifier le choix des options ");
+                                Alert alert = new Alert(Alert.AlertType.ERROR);
+                                alert.setTitle("failed");
+                                alert.setContentText("verifier le choix des options ");
+                                alert.showAndWait();
+                            }
+                        }}else {
+                        System.out.println("ajoutez une ? ");
 
-                qs.add1(qq);
-                    System.out.println("ajout avec success");
-                    //System.out.println(id);
+                    }
 
-                // questions.add(q);
-                question.clear();
-                ecrire1.clear();
-                ecrire2.clear();
-                ecrire3.clear();
-                ecrire11.clear();
-            }}
-            // System.out.println(questions);
-            //System.out.println(qu);
+                }else {
 
-        }}
+                System.out.println("le quiz est pret");
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("SUCCES");
+                    alert.setContentText("Quiz crée !! ");
+                    alert.showAndWait();
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/questions25.fxml"));
+                    Parent root = loader.load();
+                    Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                    Scene scene = new Scene(root);
+                    st.setScene(scene);
+                    st.show();
+
+            }
+
+
+    }}}
+
 
 
 
