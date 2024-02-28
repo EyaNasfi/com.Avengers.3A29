@@ -12,6 +12,7 @@ public interface IServices<T> {
 
     void supprimer(int id) throws SQLException;
 
+
     List<T> recupperer() throws SQLException;
 
 }

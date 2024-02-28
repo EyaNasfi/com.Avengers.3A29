@@ -2,22 +2,30 @@ package tn.esprit.crud.models;
 
 public class User {
     private int id;
-    private String nom,prenom,adresse,email,mdp;
+    private String nom,prenom,adresse,email,mdp,role;
 
-public User(){
-    this.id = id;
-    this.nom = nom;
-    this.prenom = prenom;
-    this.adresse = adresse;
-    this.email = email;
-    this.mdp = mdp;
-}
-    public User(String nom , String prenom , String adresse , String email , String mdp){
+
+    public User(int id , String nom , String prenom , String adresse , String email , String mdp,String role){
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.email = email;
         this.mdp = mdp;
+        this.role = role;
+    }
+
+    public User() {
+
+    }
+
+    public User(String nom, String prenom, String adresse, String email, String mdp, String role) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adresse = adresse;
+        this.email = email;
+        this.mdp = mdp;
+        this.role = role;
     }
 
     public int getId() {
@@ -68,6 +76,14 @@ public User(){
         this.mdp = mdp;
     }
 
+    public String getrole() {
+        return role;
+    }
+
+    public void setrole(String role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -77,8 +93,11 @@ public User(){
                 ", adresse='" + adresse + '\'' +
                 ", email='" + email + '\'' +
                 ", mdp='" + mdp + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
+
 }
+
 
 
