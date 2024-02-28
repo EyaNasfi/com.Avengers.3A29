@@ -32,6 +32,8 @@ public class PaiementManagment {
 
     @FXML
     private TextField Iduser;
+    @FXML
+    private TextField numérodelacarte;
 
     @FXML
     private Button payButton;
@@ -73,6 +75,38 @@ public class PaiementManagment {
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+    public void initialize() {
+        numérodelacarte.setOnKeyTyped(event -> {
+            char inputChar = event.getCharacter().charAt(0);
+            if (!Character.isDigit(inputChar)) {
+                event.consume(); // Consume the event if it's not a digit
+            }
+        });
+
+        // Add event handler for focusLost to validate the length
+        numérodelacarte.focusedProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue) {
+                validateCardNumber();
+            }
+        });
+    }
+
+    private void validateCardNumber() {
+        String cardNumber = numérodelacarte.getText();
+        if (!cardNumber.matches("\\d{9,}")) {
+            showErrorDialog("Invalid card number. It should be numeric and at least 9 digits.");
+            // You might also choose to clear the field or take other actions based on your requirements.
+        }
+    }
+
+    private void showErrorDialog(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
         alert.showAndWait();
     }
 }

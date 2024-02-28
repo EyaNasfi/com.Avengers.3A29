@@ -5,41 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94583e90-3604-42d9-92a0-81b12649a9ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/RemiseManagment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/affichage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Util/MyDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Paiement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Remise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/IPaiement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/ServciceRemise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/ServicePaiement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/MainFX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/affiche.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/1687098164135.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/admin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/dec.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/event.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/pay.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/rec.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/salle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/utilisateur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/remise.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "gestpayremise",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Program Files/Java/javafx-sdk-21.0.2",
     "node.js.detected.package.eslint": "true",
@@ -118,7 +87,7 @@
       <updated>1708976414781</updated>
       <workItem from="1708976415847" duration="12301000" />
       <workItem from="1709023454697" duration="5247000" />
-      <workItem from="1709059907433" duration="4291000" />
+      <workItem from="1709059907433" duration="7373000" />
     </task>
     <servers />
   </component>

@@ -13,12 +13,18 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="824.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PaiementManagment">
    <children>
-      <Button fx:id="payButton" layoutX="444.0" layoutY="296.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
-      <TextField fx:id="Mpaiement" layoutX="408.0" layoutY="152.0" promptText="Mode de paiement" />
+      <Button fx:id="payButton" layoutX="424.0" layoutY="296.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="40.0" prefWidth="75.0" text="Ajouter" />
+      <TextField fx:id="Mpaiement" layoutX="408.0" layoutY="152.0" promptText="mode de paiement" />
       <TextField fx:id="Montant" layoutX="439.0" layoutY="196.0" promptText="Montant" />
-      <Text layoutX="291.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mode de paiement" />
-      <Text layoutX="342.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="montant" wrappingWidth="60.888671875" />
-      <Button layoutX="557.0" layoutY="296.0" mnemonicParsing="false" onAction="#remise" text="remise" />
+      <Text layoutX="284.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mode de paiement">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="342.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="montant" wrappingWidth="60.888671875">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Button layoutX="557.0" layoutY="296.0" mnemonicParsing="false" onAction="#remise" prefHeight="40.0" prefWidth="75.0" text="remise" />
       <Pane prefHeight="593.0" prefWidth="231.0" style="-fx-background-color: #6495ED;">
          <children>
             <ImageView fitHeight="54.0" fitWidth="66.0" layoutX="-9.0" layoutY="-11.0">
@@ -137,5 +143,11 @@
             </ImageView>
          </children>
       </Pane>
+      <TextField fx:id="numérodelacarte" layoutX="549.0" layoutY="237.0" promptText="numéro de la carte" />
+      <Text layoutX="423.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro de la carte">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
    </children>
 </Pane>
