@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6d4bc0e4-a53f-4fe4-b771-4160b38ea80d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../3A17/.idea/3A17.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3A17/GestionMagasin3A17/GestionMagasin3A17.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3A17/InterfaceJAVA8/InterfaceJAVA8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3A17/gestionEtudiant3A17/gestionEtudiant3A17.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COPJ-TDRevision-main/ProjetTDRevision.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pidev_3A29_Dynamic_Developers_Desktop_JavaFx-main/Pidev_3A29_Dynamic_Developers_Desktop_JavaFx-main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PrositZoo/PrositZoo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java w fazet/JavaStream/JavaStream.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java w fazet/Prosit11/Prosit11.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java w fazet/prosit10/prosit10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java w fazet/prosit9/prosit9_10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pidev_spartans_3a29-Montassar/.idea/workshopPidev2324-workshopJDBC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AfficherFormation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AjouterFormation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Categorie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Cours.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/categorie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/cours.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/formation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/iservice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/serviceFormation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/servicecategorie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/servicecours.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/MainFX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/MyDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AfficherFormation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AjouterFormation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/categorie.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cours.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2cpfxlEUtrtN94nssXcZ1XRAxzd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/HP/Desktop/test_final/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Desktop\test_final\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d4bc0e4-a53f-4fe4-b771-4160b38ea80d" name="Changes" comment="" />
+      <created>1708813689218</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708813689218</updated>
+      <workItem from="1708813690467" duration="5788000" />
+      <workItem from="1708893873812" duration="11786000" />
+      <workItem from="1708926491558" duration="4619000" />
+      <workItem from="1708931152834" duration="1329000" />
+      <workItem from="1708932517447" duration="78000" />
+      <workItem from="1708932616304" duration="4715000" />
+      <workItem from="1708937521281" duration="3485000" />
+      <workItem from="1708982480165" duration="2566000" />
+      <workItem from="1708997178293" duration="2196000" />
+      <workItem from="1709067729266" duration="19056000" />
+      <workItem from="1709087634666" duration="9677000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

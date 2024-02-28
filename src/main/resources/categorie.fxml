@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Categorie">
+   <children>
+      <ImageView fitHeight="111.0" fitWidth="139.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane prefHeight="496.0" prefWidth="790.0" style="-fx-background-color: A5D6FF;">
+         <children>
+            <Pane layoutX="-3.0" layoutY="-1.0" prefHeight="515.0" prefWidth="192.0" style="-fx-background-color: #6495ED;">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="66.0" layoutX="-9.0" layoutY="-11.0">
+                     <image>
+                        <Image url="@../../../../../Downloads/Design%20sans%20titre%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="6.0" layoutY="118.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="175.0" style="-fx-background-color: #6495ED; -fx-background-radius: 20;" text="Gestion des salles" />
+                  <Button layoutX="6.0" layoutY="199.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #6495ED; -fx-background-radius: 20;" text="Gestion de réclamations" />
+                  <Button layoutX="4.0" layoutY="159.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="177.0" style="-fx-background-color: #6495ED; -fx-background-radius: 20;" text="Gestion des évenements" />
+                  <Button layoutX="6.0" layoutY="237.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="177.0" style="-fx-background-color: #6495ED; -fx-background-radius: 20;" text="Gestion des paiements" />
+                  <Label layoutX="2.0" layoutY="28.0" prefHeight="11.0" prefWidth="81.0" text="9ariny-Academy" textFill="#151c5c">
+                     <font>
+                        <Font name="Arial" size="7.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="83.0" layoutY="43.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView layoutX="77.0" layoutY="55.0" opacity="0.22">
+                     <image>
+                        <Image url="@../../../../../Downloads/add-photo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="36.0" layoutY="283.0" text="Gestion ded administrateur" />
+                  <Button cancelButton="true" defaultButton="true" layoutX="-1.0" layoutY="376.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #6495ED;" text="    Déconnecté" textAlignment="RIGHT" wrapText="true" />
+                  <ImageView fitHeight="22.0" fitWidth="19.0" layoutX="7.0" layoutY="381.0" opacity="0.2">
+                     <image>
+                        <Image url="@../../../../../Downloads/logout.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="3.0" layoutY="86.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="187.0" style="-fx-background-color: A5D6FF; -fx-background-radius: 20;" text="Gestion de formation" />
+                  <Label layoutX="109.0" layoutY="2.0" prefHeight="11.0" prefWidth="81.0" text="Bienvenue admin" textFill="#151c5c">
+                     <font>
+                        <Font name="Arial" size="9.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="3.0" layoutY="313.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #6495ED; -fx-background-radius: 20;" text="Gestion des utilisateurs" />
+               </children>
+            </Pane>
+            <Label layoutX="226.0" layoutY="54.0" prefHeight="46.0" prefWidth="131.0" text="Nom categorie" />
+            <Label layoutX="227.0" layoutY="81.0" prefHeight="17.0" prefWidth="0.0" />
+            <Label layoutX="226.0" layoutY="108.0" />
+            <Label layoutX="234.0" layoutY="140.0" />
+            <Label layoutX="237.0" layoutY="168.0" />
+            <Label layoutX="196.0" layoutY="17.0" prefHeight="17.0" prefWidth="162.0" text="Ajouter une Categorie:" textFill="#151c5c">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="198.0" layoutY="266.0" prefHeight="17.0" prefWidth="143.0" textFill="#151c5c">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="194.0" />
+            <Button layoutX="508.0" layoutY="64.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AjouterCategorie" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="ajouter" />
+            <TextField fx:id="NomC" layoutX="335.0" layoutY="64.0" prefHeight="34.0" prefWidth="157.0" style="-fx-background-radius: 20;" />
+            <ImageView fitHeight="29.0" fitWidth="143.0" layoutX="601.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../study_land/src/main/resources/src/ajouter-le-fichier.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tableviewcategorie" layoutX="198.0" layoutY="103.0" prefHeight="200.0" prefWidth="556.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="279.20001220703125" text="idCategorie" />
+                <TableColumn fx:id="nomc" prefWidth="243.19992065429688" text="nomCategorie" />
+              </columns>
+            </TableView>
+            <Button layoutX="238.0" layoutY="320.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AfficherCat" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="Afficher" />
+            <ImageView fitHeight="37.0" fitWidth="50.0" layoutX="193.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../study_land/src/main/resources/src/panneau-daffichage.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="374.0" layoutY="319.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#supprimerCategorie" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="Supprimer" />
+            <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="335.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../study_land/src/main/resources/src/supprimer.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="492.0" layoutY="320.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#modifierCategorie" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="Modifier" />
+            <Button layoutX="226.0" layoutY="395.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accederFormation" prefHeight="34.0" prefWidth="131.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="Acceder a Formation" />
+            <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="180.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../study_land/src/main/resources/src/fleches.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="139.0" layoutX="515.0" layoutY="-12.0">
+               <image>
+                  <Image url="@../../../../../Downloads/416368579_406741998473329_2878191773416462521_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

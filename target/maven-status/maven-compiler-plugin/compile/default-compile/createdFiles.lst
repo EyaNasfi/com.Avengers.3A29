@@ -1,0 +1,15 @@
+controller\AjouterFormation.class
+services\servicecours.class
+util\MyDB.class
+model\formation.class
+model\categorie.class
+test\main.class
+services\iservice.class
+test\MainFX.class
+controller\Cours$1.class
+model\cours.class
+services\servicecategorie.class
+controller\AfficherFormation.class
+controller\Cours.class
+services\serviceFormation.class
+controller\Categorie.class
