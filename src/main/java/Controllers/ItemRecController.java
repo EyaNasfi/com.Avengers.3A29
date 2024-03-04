@@ -29,7 +29,7 @@ import static java.lang.String.valueOf;
 
 public class ItemRecController {
 
-    private Map<Integer, Boolean> answerSelectedMap = new HashMap<>(); // Map pour stocker si une réponse a été sélectionnée pour chaque question
+    public Map<Integer, Boolean> answerSelectedMap  = new HashMap<>(); // Map pour stocker si une réponse a été sélectionnée pour chaque question
 public int score=0;
 quiz qz=new quiz();
 
