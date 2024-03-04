@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ajouterreclamation">
@@ -23,76 +22,9 @@
             <Font size="18.0" />
           </font>
         </Label>
-            <Pane layoutX="3.0" prefHeight="540.0" prefWidth="670.0" style="-fx-background-color: A5D6FF;">
+            <Pane layoutX="3.0" prefHeight="593.0" prefWidth="824.0" style="-fx-background-color: A5D6FF;">
                <children>
-                  <Pane layoutX="-3.0" layoutY="-1.0" prefHeight="540.0" prefWidth="192.0" style="-fx-background-color: #6495ED;">
-                     <children>
-                        <ImageView fitHeight="54.0" fitWidth="66.0" layoutX="-9.0" layoutY="-11.0">
-                           <image>
-                              <Image url="/logo.png" />
-                           </image>
-                        </ImageView>
-                        <Button layoutX="8.0" layoutY="171.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="175.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Gestion des salles" />
-                        <Button layoutX="6.0" layoutY="252.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Gestion de réclamations" />
-                        <Button layoutX="6.0" layoutY="212.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="177.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Gestion des évenements" />
-                        <Button layoutX="8.0" layoutY="290.0" mnemonicParsing="false" onAction="#quiz" prefHeight="32.0" prefWidth="177.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestion des quizs" />
-                        <Label layoutX="2.0" layoutY="28.0" prefHeight="11.0" prefWidth="81.0" text="9ariny-Academy" textFill="#151c5c">
-                           <font>
-                              <Font name="Arial" size="7.0" />
-                           </font>
-                        </Label>
-                        <Circle fill="WHITE" layoutX="90.0" layoutY="67.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
-                        <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="60.0" layoutY="34.0">
-                           <image>
-                              <Image url="/moi.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="55.0" layoutY="103.0" text="Nasfi Eya" />
-                        <Button cancelButton="true" defaultButton="true" layoutX="-1.0" layoutY="511.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="    Déconnecté" textAlignment="RIGHT" wrapText="true" />
-                        <ImageView fitHeight="22.0" fitWidth="19.0" layoutX="7.0" layoutY="516.0" opacity="0.2">
-                           <image>
-                              <Image url="/logout.png" />
-                           </image>
-                        </ImageView>
-                        <Button layoutX="7.0" layoutY="329.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestion des formations" />
-                        <Label layoutX="109.0" layoutY="2.0" prefHeight="11.0" prefWidth="81.0" text="Bienvenue etudiant" textFill="#151c5c">
-                           <font>
-                              <Font name="Arial" size="9.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="5.0" layoutY="366.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Profil" />
-                        <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="9.0" layoutY="261.0" opacity="0.42">
-                           <image>
-                              <Image url="/probleme.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="10.0" layoutY="375.0" opacity="0.42">
-                           <image>
-                              <Image url="/prof.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="11.0" layoutY="301.0" opacity="0.42">
-                           <image>
-                              <Image url="/affaires-et-finances.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="8.0" layoutY="224.0" opacity="0.42">
-                           <image>
-                              <Image url="/calendrier.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="11.0" layoutY="338.0" opacity="0.42">
-                           <image>
-                              <Image url="/education.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="14.0" layoutX="11.0" layoutY="180.0" opacity="0.41">
-                           <image>
-                              <Image url="/salle-de-reunion.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
+                  <Pane layoutX="-5.0" prefHeight="593.0" prefWidth="192.0" style="-fx-background-color: #6495ED;" />
                   <Label layoutX="199.0" layoutY="36.0" prefHeight="17.0" prefWidth="191.0" text="Les reclamations" textFill="#151c5c">
                      <font>
                         <Font name="Berlin Sans FB" size="15.0" />
@@ -118,6 +50,35 @@
                   </TableView>
                   <Button layoutX="407.0" layoutY="287.0" mnemonicParsing="false" onAction="#supp" prefHeight="32.0" prefWidth="117.0" style="-fx-background-radius: 20;" text="supprimer" />
                   <Button layoutX="244.0" layoutY="286.0" mnemonicParsing="false" onAction="#update" prefHeight="32.0" prefWidth="117.0" style="-fx-background-radius: 20;" text="Mise à jour" />
+                  <ImageView fitHeight="54.0" fitWidth="66.0" layoutX="1.0" layoutY="-1.0">
+                     <image>
+                        <Image url="/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="4.0" layoutY="175.0" mnemonicParsing="false" onAction="#quiz" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Faire un quiz" />
+                  <Button layoutX="3.0" layoutY="346.0" mnemonicParsing="false" onAction="#forma" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Formations dispo" />
+                  <Label layoutX="12.0" layoutY="38.0" prefHeight="11.0" prefWidth="81.0" text="9ariny-Academy" textFill="#151c5c">
+                     <font>
+                        <Font name="Arial" size="7.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="70.0" layoutY="59.0">
+                     <image>
+                        <Image url="/moi.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="69.0" layoutY="121.0" text="Nasfi Eya" />
+                  <Button cancelButton="true" defaultButton="true" layoutX="-1.0" layoutY="561.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="    Déconnecté" textAlignment="RIGHT" wrapText="true" />
+                  <Button layoutX="4.0" layoutY="387.0" mnemonicParsing="false" onAction="#event" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Evenements disponibles" />
+                  <Label layoutX="93.0" layoutY="10.0" prefHeight="11.0" prefWidth="81.0" text="Bienvenue etudiant" textFill="#151c5c">
+                     <font>
+                        <Font name="Arial" size="9.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="1.0" layoutY="432.0" mnemonicParsing="false" onAction="#profil" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Profil" />
+                  <Button layoutX="4.0" layoutY="217.0" mnemonicParsing="false" onAction="#reclama" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Envoyer reclamation" />
+                  <Button layoutX="4.0" layoutY="259.0" mnemonicParsing="false" onAction="#salles" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Consulter les salles" />
+                  <Button layoutX="3.0" layoutY="303.0" mnemonicParsing="false" onAction="#formation" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Acheter formations" />
                </children>
             </Pane>
       </children>

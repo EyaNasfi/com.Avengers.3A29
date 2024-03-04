@@ -236,4 +236,40 @@ public int returne() throws SQLException {
 
     public void find(javafx.event.ActionEvent event) {
     }
+
+    public void ajouter(javafx.event.ActionEvent event) {
+    }
+
+    public void reclama(javafx.event.ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/reclamationadmin.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
+
+    public void event(javafx.event.ActionEvent event) {
+    }
+
+    public void formations(javafx.event.ActionEvent event) {
+    }
+
+    public void cours(javafx.event.ActionEvent event) {
+    }
+
+    public void remise(javafx.event.ActionEvent event) {
+    }
+
+    public void salle(javafx.event.ActionEvent event) {
+    }
+
+    public void club(javafx.event.ActionEvent event) {
+    }
+
+    public void equipement(javafx.event.ActionEvent event) {
+    }
+
+    public void verspageadus(javafx.event.ActionEvent event) {
+    }
 }

@@ -20,24 +20,24 @@ import models.quiz;
 
 public class questions {
 
-        @FXML
-        private TextField ecrire1;
+    @FXML
+    private TextField ecrire1;
 
-        @FXML
-        private TextField ecrire2;
+    @FXML
+    private TextField ecrire2;
 
-        @FXML
-        private TextField ecrire3;
+    @FXML
+    private TextField ecrire3;
 
-        @FXML
-        private TextField question;
+    @FXML
+    private TextField question;
 
     public int getIdd() {
         return idd;
     }
 
     @FXML
-        private ComboBox<String> answerbox;
+    private ComboBox<String> answerbox;
 
     public void setIdd(int idd) {
         this.idd = idd;
@@ -54,22 +54,23 @@ public class questions {
     private int nbrquestt;
 
     public int idd;
-    quizcontroller qz=new quizcontroller();
+    quizcontroller qz = new quizcontroller();
 
     //@FXML
-        //private TextField ecrire11;
-      //  private ArrayList<Questions>questions=new ArrayList<>();
-      questionservice qs=new questionservice();
+    //private TextField ecrire11;
+    //  private ArrayList<Questions>questions=new ArrayList<>();
+    questionservice qs = new questionservice();
     //public class questions {
 
-        @FXML
-        void initialize () throws NoSuchFieldException {
-           answerbox.setVisible(false);
+    @FXML
+    void initialize() throws NoSuchFieldException {
+        answerbox.setVisible(false);
 
-           /// System.out.println(getAff());
+        /// System.out.println(getAff());
 
         ///question.setText(String.valueOf(quizcontroller.class.getField(question.getId())));
-        }
+    }
+
     @FXML
     void quiz(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/quiz.fxml"));
@@ -79,6 +80,7 @@ public class questions {
         st.setScene(scene);
         st.show();
     }
+
     @FXML
     void rec(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/ajouterreclamation.fxml"));
@@ -90,26 +92,27 @@ public class questions {
     }
 
 
-        public void submit (ActionEvent actionEvent) throws SQLException, IOException {
-            //System.out.println(getIdd());
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/questions25.fxml"));
-            Parent root = loader.load();
-            Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            st.setScene(scene);
-            st.show();
-        }
-   @FXML
+    public void submit(ActionEvent actionEvent) throws SQLException, IOException {
+        //System.out.println(getIdd());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/questions25.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
+
+    @FXML
     void affi(ActionEvent event) {
-            answerbox.setVisible(true);
-       String qu = this.question.getText();
-       String op1 = this.ecrire1.getText();
-       String op2 = this.ecrire2.getText();
-       String op3 = this.ecrire3.getText();
-       answerbox.getItems().addAll(op1, op2, op3);
-       //answerbox.setItems(op1,op2,op3);
-       answerbox.getSelectionModel().getSelectedItem();
-       answerbox.getValue();
+        answerbox.setVisible(true);
+        String qu = this.question.getText();
+        String op1 = this.ecrire1.getText();
+        String op2 = this.ecrire2.getText();
+        String op3 = this.ecrire3.getText();
+        answerbox.getItems().addAll(op1, op2, op3);
+        //answerbox.setItems(op1,op2,op3);
+        answerbox.getSelectionModel().getSelectedItem();
+        answerbox.getValue();
 
     }
 
@@ -121,79 +124,142 @@ public class questions {
         //System.out.println(qui.getNbrquest());
         Questions q = new Questions();
         for (int i = 0; i < getNbrquestt(); i++) {
-                if ((i < getNbrquestt())) {
+            if ((i < getNbrquestt())) {
 
-                    String qu = this.question.getText();
-                    String op1 = this.ecrire1.getText();
-                    String op2 = this.ecrire2.getText();
-                    String op3 = this.ecrire3.getText();
-                    if (!((op1 == op2) || (op1 == op3) || (op2 == op3))) {
-                        //  System.out.println(Integer.parseInt(q.getQuestion()));
-                        answerbox.getItems().addAll(op1, op2, op3);
-                        //answerbox.setItems(op1,op2,op3);
-                        answerbox.getSelectionModel().getSelectedItem();
-                        answerbox.getValue();
+                String qu = this.question.getText();
+                String op1 = this.ecrire1.getText();
+                String op2 = this.ecrire2.getText();
+                String op3 = this.ecrire3.getText();
+                if (!((op1 == op2) || (op1 == op3) || (op2 == op3))) {
+                    //  System.out.println(Integer.parseInt(q.getQuestion()));
+                    answerbox.getItems().addAll(op1, op2, op3);
+                    //answerbox.setItems(op1,op2,op3);
+                    answerbox.getSelectionModel().getSelectedItem();
+                    answerbox.getValue();
 
-                        if ((!qu.trim().isEmpty() && !op1.trim().isEmpty() && !op2.trim().isEmpty() && !op3.trim().isEmpty() && answerbox != null)) {
-                            if ((qu.endsWith("?"))) {
-                                String an = answerbox.getValue();
-                                int j = getIdd();
-                                Questions qq = new Questions(op1, op2, op3, an, qu, j);
-                                qs.add1(qq);
-                                System.out.println("ajout avec success");
-                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                                alert.setTitle("failed");
-                                alert.setContentText("ajout avec success ");
-                                alert.showAndWait();
-                                // questions.add(q);
-                                question.clear();
-                                ecrire1.clear();
-                                ecrire2.clear();
-                                ecrire3.clear();
-                                answerbox.getItems().clear();
-                            } else {
-                                Alert alert = new Alert(Alert.AlertType.ERROR);
-                                alert.setTitle("failed");
-                                alert.setContentText("ajoutez une ?");
-                                alert.showAndWait();
-                            }
+                    if ((!qu.trim().isEmpty() && !op1.trim().isEmpty() && !op2.trim().isEmpty() && !op3.trim().isEmpty() && answerbox != null)) {
+                        if ((qu.endsWith("?"))) {
+                            String an = answerbox.getValue();
+                            int j = getIdd();
+                            Questions qq = new Questions(op1, op2, op3, an, qu, j);
+                            qs.add1(qq);
+                            System.out.println("ajout avec success");
+                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                            alert.setTitle("failed");
+                            alert.setContentText("ajout avec success ");
+                            alert.showAndWait();
+                            // questions.add(q);
+                            question.clear();
+                            ecrire1.clear();
+                            ecrire2.clear();
+                            ecrire3.clear();
+                            answerbox.getItems().clear();
                         } else {
-
-                            System.out.println("remplir toutes les champs  ");
                             Alert alert = new Alert(Alert.AlertType.ERROR);
                             alert.setTitle("failed");
-                            alert.setContentText("remplir toutes les champs  ");
+                            alert.setContentText("ajoutez une ?");
                             alert.showAndWait();
                         }
                     } else {
 
-                        System.out.println("options doivent etre differentes  ");
+                        System.out.println("remplir toutes les champs  ");
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setTitle("failed");
-                        alert.setContentText("options doivent etre differentes   ");
+                        alert.setContentText("remplir toutes les champs  ");
                         alert.showAndWait();
                     }
-                }else {System.out.println("quiz pret ");
+                } else {
+
+                    System.out.println("options doivent etre differentes  ");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("failed");
-                    alert.setContentText("quiz pret  ");
+                    alert.setContentText("options doivent etre differentes   ");
                     alert.showAndWait();
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/questions25.fxml"));
-                    Parent root = loader.load();
-                    Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                    Scene scene = new Scene(root);
-                    st.setScene(scene);
-                    st.show();
-
-
-
-                        }
-
-
-    }
                 }
+            } else {
+                System.out.println("quiz pret ");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("failed");
+                alert.setContentText("quiz pret  ");
+                alert.showAndWait();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/questions25.fxml"));
+                Parent root = loader.load();
+                Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                Scene scene = new Scene(root);
+                st.setScene(scene);
+                st.show();
+
+
+            }
+
 
         }
+    }
+
+
+
+
+
+    @FXML
+    void ajouter(ActionEvent event) {
+
+    }
+
+    @FXML
+    void club(ActionEvent event) {
+
+    }
+
+    @FXML
+    void cours(ActionEvent event) {
+
+    }
+
+    @FXML
+    void equipement(ActionEvent event) {
+
+    }
+
+    @FXML
+    void event(ActionEvent event) {
+
+    }
+
+    @FXML
+    void formations(ActionEvent event) {
+
+    }
+
+
+
+    @FXML
+    void reclama(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/reclamationadmin.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+
+    }
+
+    @FXML
+    void remise(ActionEvent event) {
+
+    }
+
+    @FXML
+    void salle(ActionEvent event) {
+
+    }
+
+
+
+    @FXML
+    void verspageadus(ActionEvent event) {
+
+    }
+}
 
 
 

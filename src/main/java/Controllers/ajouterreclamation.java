@@ -193,14 +193,6 @@ public class ajouterreclamation {
 
 
 
-
-
-
-
-
-
-
-
     public void supp(ActionEvent actionEvent) throws SQLException {
         Reclamation r = affiche.getSelectionModel().getSelectedItem() ;
         System.out.println(r.getId());
@@ -210,6 +202,28 @@ public class ajouterreclamation {
     }
 
 
+    public void forma(ActionEvent event) {
+    }
 
+    public void event(ActionEvent event) {
+    }
+
+    public void profil(ActionEvent event) {
+    }
+
+    public void reclama(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ajouterreclamation.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
+
+    public void salles(ActionEvent event) {
+    }
+
+    public void formation(ActionEvent event) {
+    }
 }
 
