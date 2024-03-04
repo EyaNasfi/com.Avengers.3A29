@@ -4,13 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
     <groupId>org.example</groupId>
     <artifactId>reclamations</artifactId>
+=======
+    <groupId>code-masters</groupId>
+    <artifactId>StudyLand</artifactId>
+>>>>>>> gestionSalles
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+<<<<<<< HEAD
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
@@ -18,15 +24,43 @@
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>8.2.0</version>
+=======
+        <javafx.version>17.0.2</javafx.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Add your dependencies here -->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+>>>>>>> gestionSalles
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
+<<<<<<< HEAD
             <version>21.0.2</version>
+=======
+            <version>${javafx.version}</version>
+>>>>>>> gestionSalles
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
+<<<<<<< HEAD
             <version>21.0.2</version>
         </dependency>
         <dependency>
@@ -73,16 +107,51 @@
             <groupId>com.gluonhq</groupId>
             <artifactId>maps</artifactId>
             <version>2.0.0-ea+6</version>
+=======
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+>>>>>>> gestionSalles
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
+<<<<<<< HEAD
             <version>17</version>
+=======
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+>>>>>>> gestionSalles
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
+<<<<<<< HEAD
+=======
+            <!-- Add this plugin for deployment -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.1.1</version> <!-- Use the latest version available -->
+            </plugin>
+
+            <!-- Add this plugin for site generation -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.9.1</version> <!-- Use a version available in the repository -->
+            </plugin>
+
+            <!-- Add the JavaFX Maven plugin -->
+>>>>>>> gestionSalles
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -94,4 +163,7 @@
         </plugins>
     </build>
 </project>
+<<<<<<< HEAD
 
+=======
+>>>>>>> gestionSalles
