@@ -4,75 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0e5f50e-c6b1-442f-af82-7f82b7fcf6f2" name="Changes" comment="git commit &quot;msg&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/ContactController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/itemrecControlleradmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/popupC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/popupppC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Services/BadWordFilterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ItemRec.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/en-arriere.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/itemquest.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/questint.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reclamationadmin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reclamationadmin2.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/start.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/ItemRecController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/Itemq.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/affreclamationreponseC.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/interfacequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/quiz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/reclamationreponseC.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ItemRec.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Services/reponseservice.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/en-arriere.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/itemquest.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/questint.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/reclamationadmin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/reclamationadmin2.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/start.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ItemRecController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ItemRecController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Itemq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Itemq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/affquestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/affquestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/affreclamationreponseC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/affreclamationreponseC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ajouterreclamation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ajouterreclamation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/interfacequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/interfacequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/questions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/quizcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/quizcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/reclamationreponseC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/reclamationreponseC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/IService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/questionservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/questionservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/quizservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/quizservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/reclamationservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/reclamationservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/reponseservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/reponseservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Reclamation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Reclamation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Reponses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Reponses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ajouterreclamation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ajouterreclamation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nvquiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nvquiz.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/questions25.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/questions25.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/affquestions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/affquestions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ajouterreclamation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ajouterreclamation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/questions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/questions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/IService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/IService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/questionservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/questionservice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/quizservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/quizservice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/reclamationservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/reclamationservice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ajouterreclamation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ajouterreclamation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Reclamation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Reclamation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Reponses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Reponses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/quiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nvquiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nvquiz.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/questions25.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/questions25.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="b0e5f50e-c6b1-442f-af82-7f82b7fcf6f2" name="Changes" comment="git commit &quot;msg&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,26 +65,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eya/IdeaProjects/Crud&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.4352518&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "gestionreclamationetquiz",
+    "last_opened_file_path": "C:/Users/Eya/IdeaProjects/Crud",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.4352518",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.MainFX">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Main" />
@@ -231,7 +163,7 @@
       <workItem from="1709467874198" duration="21298000" />
       <workItem from="1709509148185" duration="10627000" />
       <workItem from="1709523687989" duration="2718000" />
-      <workItem from="1709556387094" duration="4443000" />
+      <workItem from="1709556387094" duration="5086000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <option name="closed" value="true" />
