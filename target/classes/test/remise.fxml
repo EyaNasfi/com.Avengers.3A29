@@ -4,8 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -48,7 +46,7 @@
             <Font name="Arial" size="7.0" />
          </font>
       </Label>
-      <Label layoutX="74.0" layoutY="81.0" text="Nasfi Eya" />
+      <Label layoutX="59.0" layoutY="81.0" text="Nciri Mohamed Elarbi" />
       <Button layoutX="21.0" layoutY="305.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Liste des paiements" />
       <Button layoutX="21.0" layoutY="148.0" mnemonicParsing="false" onAction="#reclama" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestion reclamations" />
       <Button layoutX="21.0" layoutY="186.0" mnemonicParsing="false" onAction="#event" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestions events" />
@@ -65,11 +63,6 @@
             <Font name="Arial" size="9.0" />
          </font>
       </Label>
-      <ImageView fitHeight="39.0" fitWidth="49.0" layoutX="77.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/429511356_314309851656071_1715721751443100459_n.png" />
-         </image>
-      </ImageView>
       <!--<Button layoutX="21.0" layoutY="109.0" mnemonicParsing="false" onAction="#quiz" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Gestion quiz" />
       <Label layoutX="22.0" layoutY="48.0" prefHeight="11.0" prefWidth="81.0" text="9ariny-Academy" textFill="#151c5c">
          <font>

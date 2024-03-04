@@ -5,8 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94583e90-3604-42d9-92a0-81b12649a9ba" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/Paiement_1709566098393.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paiement_1709566240963.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paiement_1709568448314.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paiement_1709569688966.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paiement_1709581268892.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paiement_1709585967987.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paiement_1709586158777.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/EmailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/eemail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/Mainadmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/Mainadmini.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test/Aadmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test/admin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test/email.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test/etudiant.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/429511356_314309851656071_1715721751443100459_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/7422080.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/RemiseManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/RemiseManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/affichage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/affichage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test/affiche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/affiche.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test/remise.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/remise.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/PaiementManagment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/PaiementManagment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/RemiseManagment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/RemiseManagment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/affichage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/affichage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/affiche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/affiche.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/remise.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/remise.fxml" afterDir="false" />
+>>>>>>> gestionpayerremise
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
         <option value="FxmlFile" />
       </list>
     </option>
@@ -50,14 +89,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Admin.executor": "Run",
     "Application.MainFX.executor": "Run",
+    "Application.Mainadmin.executor": "Run",
     "Maven.Avangers [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "dev",
+=======
+    "git-widget-placeholder": "paiement",
+>>>>>>> gestionpayerremise
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Program Files/Java/javafx-sdk-21.0.2",
+    "last_opened_file_path": "C:/Users/LENOVO/IdeaProjects/exampleproject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,9 +120,34 @@
       <recent name="C:\Users\LENOVO\IdeaProjects\Avangers\src\main\resources\test\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LENOVO\IdeaProjects\Avangers\src\main\resources\test\images" />
       <recent name="C:\Users\LENOVO\IdeaProjects\Avangers\src\main\resources\test" />
       <recent name="C:\Users\LENOVO\IdeaProjects\Avangers\src\main\resources" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="test" />
+      <recent name="Controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Mainadmin">
+    <configuration name="MainFX" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="test.MainFX" />
+      <module name="Avangers" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Mainadmin" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="test.Mainadmin" />
+      <module name="Avangers" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Mainadmin" />
+      <item itemvalue="Application.MainFX" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -89,7 +159,10 @@
       <updated>1708976414781</updated>
       <workItem from="1708976415847" duration="12301000" />
       <workItem from="1709023454697" duration="5247000" />
-      <workItem from="1709059907433" duration="4291000" />
+      <workItem from="1709059907433" duration="9981000" />
+      <workItem from="1709226871195" duration="80000" />
+      <workItem from="1709384694781" duration="5553000" />
+      <workItem from="1709489708933" duration="19971000" />
     </task>
     <servers />
   </component>
