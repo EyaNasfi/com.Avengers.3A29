@@ -4,60 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0e5f50e-c6b1-442f-af82-7f82b7fcf6f2" name="Changes" comment="git commit">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/reclamations_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/ItemRecController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Itemq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/affreclamationreponseC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/interfacequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/reclamationreponseC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b0e5f50e-c6b1-442f-af82-7f82b7fcf6f2" name="Changes" comment="git commit &quot;msg&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/ContactController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/itemrecControlleradmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/popupC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/popupppC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/BadWordFilterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ItemRec.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/en-arriere.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/itemquest.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/questint.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/reclamationadmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/reclamationadmin2.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/ItemRecController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/Itemq.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/affreclamationreponseC.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/interfacequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/quiz.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Controllers/reclamationreponseC.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ItemRec.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Services/reponseservice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/en-arriere.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/itemquest.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/questint.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/reclamationadmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/reclamationadmin2.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/start.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ItemRecController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ItemRecController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Itemq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Itemq.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/affquestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/affquestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/affreclamationreponseC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/affreclamationreponseC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ajouterreclamation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ajouterreclamation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/interfacequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/interfacequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/quiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/quizcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/quizcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/reclamationreponseC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/reclamationreponseC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/IService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/questionservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/questionservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/quizservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/quizservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/reclamationservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/reclamationservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/reponseservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/reponseservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Questions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Reclamation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Reclamation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Reponses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Reponses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/MainFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ajouterreclamation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ajouterreclamation.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/nvquiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nvquiz.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/questions1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/questions1.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/questions25.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/questions25.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/quiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/quiz.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/reclamation.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/affquestions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/affquestions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ajouterreclamation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ajouterreclamation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/questions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/questions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Services/IService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/IService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/questionservice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/questionservice$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Services/questionservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/questionservice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Services/quizservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/quizservice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Services/reclamationservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/reclamationservice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ajouterreclamation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ajouterreclamation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Questions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Questions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/Reclamation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Reclamation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/Reponses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Reponses.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/quiz.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nvquiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nvquiz.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/questions1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/questions1.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/questions25.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/questions25.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/quiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/quiz.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/reclamation.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/MainFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/MainFX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +107,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EyaNasfi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d24da2d9-3613-478b-ae6e-f3d87784185f" />
+        <option name="url" value="https://github.com/EyaNasfi/com.Avengers.3A29.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -112,7 +140,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eya/Downloads/jar_files/woodstox-core-6.4.0.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eya/IdeaProjects/Crud&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -121,12 +149,27 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.4352518&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.MainFX">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Main" />
+      <module name="reclamations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainFX" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="jbr-17 (2)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="test.MainFX" />
       <module name="reclamations" />
       <option name="VM_PARAMETERS" value=" --module-path &quot;C:\Users\Eya\.jdks\javafx-sdk-21.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
@@ -147,8 +190,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MainFX" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.main" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
@@ -175,7 +224,14 @@
       <workItem from="1708864684640" duration="34316000" />
       <workItem from="1708943376510" duration="41935000" />
       <workItem from="1709042539604" duration="31313000" />
-      <workItem from="1709110118520" duration="2224000" />
+      <workItem from="1709110118520" duration="4514000" />
+      <workItem from="1709196226232" duration="29543000" />
+      <workItem from="1709266822590" duration="1643000" />
+      <workItem from="1709301876109" duration="46705000" />
+      <workItem from="1709467874198" duration="21298000" />
+      <workItem from="1709509148185" duration="10627000" />
+      <workItem from="1709523687989" duration="2718000" />
+      <workItem from="1709556387094" duration="4443000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <option name="closed" value="true" />
@@ -185,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708816567419</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="git commit &quot;msg&quot;">
+      <option name="closed" value="true" />
+      <created>1709119043782</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709119043782</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +268,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="git commit" />
+    <MESSAGE value="git commit &quot;msg&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="git commit &quot;msg&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -5,15 +5,21 @@ import Services.quizservice;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.print.PrinterJob;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import models.Questions;
+import models.Reclamation;
+import org.w3c.dom.Document;
 
+import javax.swing.table.TableModel;
 import java.awt.event.ActionEvent;
+import java.awt.print.PageFormat;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -25,6 +31,9 @@ public class affquestions {
     public int getIdqui() {
         return idqui;
     }
+
+    @FXML
+    private Button pdf;
 
     private  int idqui;
 
@@ -42,9 +51,36 @@ public class affquestions {
 
     @FXML
     private TextField op3;
+    @FXML
+    private TextField find;
+    @FXML
+    private TableColumn<Questions, String> question;
 
     @FXML
-    private ListView<Questions> affiche;
+    private TableColumn<Questions, String> opp1;
+
+    @FXML
+    private TableColumn<Questions, String> opp2;
+
+    @FXML
+    private TableColumn<Questions, String> opp3;
+
+    @FXML
+    private TextField ann;
+
+    @FXML
+    private TableView<Questions> affiche;
+
+    @FXML
+    private TableColumn<Questions, String> nom;
+
+    @FXML
+    private TableColumn<Questions, Integer> nbr;
+
+    @FXML
+    private TableColumn<Questions, String> answer;
+
+
     questionservice qs= new questionservice();
     quizservice qss= new quizservice() ;
     @FXML
@@ -54,8 +90,18 @@ public class affquestions {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     });
         affichage();
+        pdf.setOnAction((actionEvent->{
+            PrinterJob job =PrinterJob.createPrinterJob();
+            if(job!=null && job.showPrintDialog(pdf.getScene().getWindow())){
+                boolean succ=job.printPage(affiche);
+                if(succ){
+                    job.endJob();
+                }
+            }
+        }));
 
         //affichage();
        //affiche.getItems();
@@ -64,11 +110,25 @@ public class affquestions {
     private void affichage() throws SQLException {
         ObservableList<Questions> qui = qs.getAll();
         affiche.setItems(qui);
-        }
+        nom.setCellValueFactory(new PropertyValueFactory<Questions, String>("nom"));
+        nbr.setCellValueFactory(new PropertyValueFactory<Questions, Integer>("nbrquest"));
+        question.setCellValueFactory(new PropertyValueFactory<Questions, String>("question"));
+        opp1.setCellValueFactory(new PropertyValueFactory<Questions, String>("op1"));
+        opp2.setCellValueFactory(new PropertyValueFactory<Questions, String>("op2"));
+        opp3.setCellValueFactory(new PropertyValueFactory<Questions, String>("op3"));
+        answer.setCellValueFactory(new PropertyValueFactory<Questions, String>("answer"));
 
 
+    }
 
+
+    @FXML
+    void pdf(ActionEvent event) throws SQLException {
+
+
+    }
        // System.out.println(nom);
+
 
 
 
@@ -85,7 +145,10 @@ public class affquestions {
         an.setText(q.getAnswer());
 
     }
+    @FXML
+    void find(ActionEvent event) {
 
+    }
 
 
 public int returne() throws SQLException {
@@ -169,5 +232,8 @@ public int returne() throws SQLException {
         Scene scene = new Scene(root);
         st.setScene(scene);
         st.show();
+    }
+
+    public void find(javafx.event.ActionEvent event) {
     }
 }

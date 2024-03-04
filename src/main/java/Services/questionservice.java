@@ -87,11 +87,40 @@ public class questionservice implements IService<Questions> {
         }
         return list;
     }
+
     @Override
     public ObservableList<Questions> get() throws SQLException {
+        return null;
+    }
+
+    public ObservableList<Questions> get(int idquiz) throws SQLException {
+        ObservableList<Questions> list = FXCollections.observableArrayList();
+        String sql = "SELECT idquest, op1, op2, op3, question,answer FROM questions WHERE idquiz=?";
+        PreparedStatement stat = connection.prepareStatement(sql);
+        stat.setInt(1, idquiz);
+        ResultSet rs = stat.executeQuery();
+        while (rs.next()) {
+            Questions q = new Questions();
+            q.setIdquest(rs.getInt("idquest"));
+            q.setOp1(rs.getString("op1"));
+            q.setOp2(rs.getString("op2"));
+            q.setOp3(rs.getString("op3"));
+            q.setQuestion(rs.getString("question"));
+            q.setAnswer(rs.getString("answer"));
+            q.setIdquiz(idquiz);
+            list.add(q);
+        }
+        return list;
+    }
+    @Override
+    public ObservableList getById(int id) throws SQLException {
+        return null;
+    }
+    public ObservableList<Questions> search(String s) throws SQLException {
         ObservableList<Questions>list = FXCollections.observableArrayList();
-        String sql ="SELECT questions.idquest,questions.op1,questions.op2,questions.op3,questions.question,questions.idquiz from questions WHERE questions.iduser=1";
-        Statement stat = connection.prepareStatement(sql);
+        String sql ="SELECT questions.idquest,questions.op1,questions.op2,questions.op3,questions.answer,questions.question,quiz.nom,quiz.nbrquest,quiz.idquiz from questions INNER JOIN quiz on questions.idquiz=quiz.idquiz WHERE questions.question like ? ";
+       PreparedStatement stat = connection.prepareStatement(sql);
+        stat.setString(1,"%" +s + "%");
         ResultSet rs= stat.executeQuery(sql);
         while (rs.next())
         {
@@ -101,19 +130,15 @@ public class questionservice implements IService<Questions> {
             q.setOp1(rs.getString("op1"));
             q.setOp2(rs.getString("op2"));
             q.setOp3(rs.getString("op3"));
-          ///  q.setAnswer(rs.getString("answer"));
+            ///  q.setAnswer(rs.getString("answer"));
             q.setQuestion(rs.getString("question"));
-          ///  q.setNom(rs.getString("nom"));
-          ///  q.setNbrquest(rs.getInt("nbrquest"));
+            ///  q.setNom(rs.getString("nom"));
+            ///  q.setNbrquest(rs.getInt("nbrquest"));
             q.setIdquiz(rs.getInt("idquiz"));
 
             //q.setUser.g("1");//q.setDescription(rs.getString("description"));
             list.add(q);
         }
         return list;
-    }
-    @Override
-    public Questions getById(int id) throws SQLException {
-        return null;
     }
 }

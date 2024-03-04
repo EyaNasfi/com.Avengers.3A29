@@ -1,6 +1,13 @@
 package Controllers;
 
+import Services.BadWordFilterService;
+import com.twilio.Twilio;
+import com.twilio.converter.Promoter;
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
 
+import java.net.URI;
+import java.math.BigDecimal;
     import javafx.collections.ObservableList;
     import javafx.event.ActionEvent;
     import javafx.fxml.FXML;
@@ -30,24 +37,16 @@ package Controllers;
     import java.sql.SQLException;
     import java.util.List;
     import java.util.Objects;
+    import java.util.Random;
 // Install the Java helper library from twilio.com/docs/java/install
-
     import com.twilio.Twilio;
     import com.twilio.rest.api.v2010.account.Message;
     import com.twilio.type.PhoneNumber;
 
-    import java.net.URI;
-    import java.util.Arrays;
-
-
-    import java.io.BufferedReader;
-    import java.io.InputStreamReader;
-    import java.io.OutputStreamWriter;
-    import java.net.URL;
-    import java.net.URLConnection;
-    import java.net.URLEncoder;
-
 public class ajouterreclamation {
+    String[] badWordsArray = {"5ra", "le", "non","fuck","pute","yezi","edara","esprit","ee"};
+
+    BadWordFilterService filter=new BadWordFilterService(badWordsArray);
 
 
     @FXML
@@ -71,9 +70,12 @@ public class ajouterreclamation {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private String otpStr;
+
     public ajouterreclamation() throws IOException {
     }
 
+    private static final String API_KEY = "e53e84a8aamsh105373ba7c877dfp19f371jsn84cc5c9c413a\n";
 
     public void affichage() throws SQLException {
         ObservableList<Reclamation> l = rs.getAll();
@@ -93,7 +95,16 @@ public class ajouterreclamation {
     void ajouter(ActionEvent event) throws SQLException {
 
 
+        if (filter.hasBadWord(titre.getText()) || filter.hasBadWord(description.getText()))
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("ALERT !!");
+            alert.setContentText("BAD WORD");
+            alert.showAndWait();
+
+        }else {
         try {
+
             rs.add1((new Reclamation(titre.getText(), description.getText())));
 
             affichage();
@@ -101,7 +112,7 @@ public class ajouterreclamation {
             // rs.getAll(new Reclamation());
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }
+        }}
 
 
         //""""" idt.setCellFactory(new PropertyValueFactory<Reclamation,Integer>("id"));
@@ -157,46 +168,37 @@ public class ajouterreclamation {
     }
 
 
+
+
+
+
     @FXML
   public   void sms(ActionEvent event) {
+       // Reclamation q=ne
 
-        sendSms();
-
-    }
-
-
-
-        public String sendSms() {
-            try {
-                // Construct data
-                String apiKey = "apikey=" + URLEncoder.encode("yourapiKey", "UTF-8");
-                String message = "&message=" + URLEncoder.encode("This is your message", "UTF-8");
-                String sender = "&sender=" + URLEncoder.encode("Jims Autos", "UTF-8");
-                String numbers = "&numbers=" + URLEncoder.encode("447123456789", "UTF-8");
+            // Find your Account Sid and Token at twilio.com/console
+             final String ACCOUNT_SID = "ACab83a00aa24c2945460363efc3c77fed";
+             final String AUTH_TOKEN = "5089b931247ad78ece94fe15bc7f0fdc";
 
 
-                // Send data
-                String data = "https://api.txtlocal.com/send/?" + "NTk0MjZiNzY1NjZhNTM3MTQ5NjQ0NjM3NzMzOTRjNDY "+21782711 + description.getText() +"eya";
-                URL url = new URL(data);
-                URLConnection conn = url.openConnection();
-                conn.setDoOutput(true);
+                Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+                Message message = Message.creator(
+                                new com.twilio.type.PhoneNumber("+21621782711"),
+                                new com.twilio.type.PhoneNumber("+14243560944"),
+                                description.getText())
+                        .create();
 
-                // Get the response
-                BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                String line;
-                String sResult="";
-                while ((line = rd.readLine()) != null) {
-                    // Process line...
-                    sResult=sResult+line+" ";
-                }
-                rd.close();
-
-                return sResult;
-            } catch (Exception e) {
-                System.out.println("Error SMS "+e);
-                return "Error "+e;
+                System.out.println(message.getSid());
             }
-        }
+
+
+
+
+
+
+
+
+
 
 
     public void supp(ActionEvent actionEvent) throws SQLException {
@@ -204,6 +206,10 @@ public class ajouterreclamation {
         System.out.println(r.getId());
         rs.delete(r.getId());
         affichage();
+
     }
+
+
+
 }
 

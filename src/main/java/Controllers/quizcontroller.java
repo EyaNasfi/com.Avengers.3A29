@@ -86,7 +86,6 @@ public class quizcontroller {
     public void ajout(ActionEvent actionEvent) throws SQLException, IOException {
         String t = nom.getText();
         int n = Integer.parseInt(nbrquest.getText());
-        if(!(t.equals(affiche.getSelectionModel().getSelectedItem().getNom()))) {
             if ((n < 10) && (n > 0)) {
                 if (!(t.trim().isEmpty() || (nbrquest.getText().isEmpty()))) {
                     quiz qz = new quiz(t, n);
@@ -109,14 +108,8 @@ public class quizcontroller {
                 affichage();
                 // FXMLLoader loader = null;
 
-            }else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("failed");
-            alert.setContentText("ce nom de quiz existe deja ");
-            alert.showAndWait();
-            System.out.println("nom existe ");
         }
-        }
+
     @FXML
     void passer(ActionEvent event) throws IOException, SQLException {
         if (!selectyyy()) {

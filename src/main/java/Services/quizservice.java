@@ -3,7 +3,6 @@ package Services;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
-import models.Questions;
 import models.quiz;
 import utils.mydb;
 
@@ -87,12 +86,12 @@ public class quizservice implements IService<quiz> {
     }
 
     @Override
-    public ObservableList<Questions> get() throws SQLException {
+    public ObservableList<quiz> get() throws SQLException {
         return null;
     }
 
     @Override
-    public quiz getById(int id) throws SQLException {
+    public ObservableList getById(int id) throws SQLException {
 
         return null;
     }

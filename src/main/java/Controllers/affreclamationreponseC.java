@@ -8,9 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import models.Questions;
 import models.Reclamation;
@@ -20,7 +19,11 @@ import models.quiz;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class affreclamationreponseC {
+public class affreclamationreponseC  {
+    @FXML
+
+    public TextArea desc;
+
     public void setIid(int iid) {
         this.iid = iid;
     }
@@ -30,34 +33,25 @@ public class affreclamationreponseC {
     }
 
     private int iid;
+   // private TextArea desc;
     @FXML
-    private TextArea description;
-
+    private VBox pitems;
+    int id;
+    //@FXML
+    // private TextArea description;
     @FXML
     private ListView<Reponses> affiche;
 
     reponseservice rs = new reponseservice();
+
     @FXML
-    void initialize() throws SQLException {affiche.setOnMouseClicked(event -> {
-
-        try {
-          // affichage();
-            select();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-    });
-        affichage();}
-    public void select() throws SQLException {
-
-
-        ///int num = affiche.getSelectionModel().getSelectedIndex();
-        Reponses r = affiche.getItems().get(affiche.getSelectionModel().getSelectedIndex());
-        description.setText(r.getContenu());
-
-
+    void initialize() throws SQLException {
+       affichage();
     }
+
+
+
+
     public void quiz(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/quiz.fxml"));
         Parent root = loader.load();
@@ -69,34 +63,45 @@ public class affreclamationreponseC {
 
 
 
-    public void ajouter(ActionEvent actionEvent) throws SQLException {
 
-        getIid();
-        System.out.println(getIid());
-        affichage();
-        String qu = this.description.getText();
-        if (!qu.trim().isEmpty()) {
+    public void affichage() throws SQLException {
+        ObservableList<Reponses> R = rs.get();
 
-            int j = getIid();
-            System.out.println(getIid());
-            Reponses qq = new Reponses(j, qu);
+            for (int i = 0; i < R.size(); i++) {
+                try {
+                    final int j = i;
+                    Reponses q = R.get(j);
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/itemrecadmin.fxml"));
+                    Node node = loader.load();
 
-            rs.add1(qq);
-            rs.getAll();
-            affiche.getItems();
-            affichage();
-            System.out.println("ajout avec success");
+                    ((Label) node.lookup("#titre")).setText(q.getTitre());
+                    ((Label) node.lookup("#description")).setText(q.getDescription());
+                    ((Label) node.lookup("#contenu")).setText(q.getContenu());
 
-        } else {
-            System.out.println("ilyaa un champs vide");
+                    System.out.println();
+                    itemrecControlleradmin irc = loader.getController();
+                    irc.setId(q.getIdrep());
+                  ///  System.out.println(q.getIdrep());
+                    ///irc.setId_user_reponse(Reclamation.getId());
+                    // Give the items some effect
+                    node.setOnMouseEntered(event -> {
+                        node.setStyle("-fx-background-color : #ffffff");
+                    });
+                    node.setOnMouseExited(event -> {
+                        node.setStyle("-fx-background-color : #ffffff");
+                    });
 
+                    pitems.getChildren().add(node);
+
+
+
+                    //affichage();
+
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
-        affichage();
-    }
-
-    private void affichage() throws SQLException {
-        affiche.setItems(rs.getAll());}
-
 
 
     public void eee(ActionEvent actionEvent) throws IOException {
@@ -118,48 +123,26 @@ public class affreclamationreponseC {
         st.show();
 
     }
-    public boolean selectyyy() throws SQLException {
-        if (!affiche.getSelectionModel().getSelectedItems().isEmpty()) {
-            return true;
-        }
-        return false;
+    //  public int getId() {
+    ///return id;
+    //  }
+
+    public void setId(int id) {
+        this.id = id;
     }
-    public void modifier(ActionEvent actionEvent) throws SQLException {
-        if (!selectyyy()){
-            affiche.getSelectionModel().getSelectedIndex();
+
+    public int getId() {
+        return id;
+    }
+
+    public int getSuppid() {
+        return suppid;
+    }
+    private int suppid;
+
+    public void setSuppid(int suppid) {
+        this.suppid = suppid;
+    }
 
 
-            System.out.println("select le reclamation a modifier");}
-        else {
-            Reponses q = affiche.getSelectionModel().getSelectedItem();
-            //select();
-
-            String qu=description.getText();
-            int j =getIid();
-            System.out.println(getIid());
-            //String nomquiz, int nbques, int idquiz, String question, String op1, String op2, String op3, String answer, int idquest
-            Reponses quuu=new Reponses(j,qu);
-            System.out.println(j);
-            System.out.println(q.getIdrep());
-            rs.update(quuu,q.getIdrep());
-            affichage();
-    }}
-
-    public void supp(ActionEvent actionEvent) throws SQLException {
-        if (!selectyyy()){
-            affiche.getSelectionModel().getSelectedIndex();
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setContentText("il faut selectionner");
-            alert.showAndWait();
-            System.out.println("select le reclamation a supprimer");}
-        else {
-        Reponses qu = affiche.getSelectionModel().getSelectedItem();
-        System.out.println(qu.getIdrep());
-        rs.delete(qu.getIdrep());
-        affichage();
-    }}
 }
-
-

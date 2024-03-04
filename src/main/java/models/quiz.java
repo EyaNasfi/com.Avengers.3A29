@@ -4,7 +4,15 @@ import java.util.List;
 
 public class quiz {
     int idquiz;
+    private boolean completed = false;
 
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
     @Override
     public String toString() {
         return "quiz{" +

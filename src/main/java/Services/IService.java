@@ -1,11 +1,8 @@
 package Services;
 
-import javafx.beans.Observable;
 import javafx.collections.ObservableList;
-import models.*;
 
 import java.sql.SQLException;
-import java.util.List;
 
 public interface IService <T> {
 
@@ -26,8 +23,8 @@ public interface IService <T> {
 
     public ObservableList<T> getAll() throws SQLException;
 
-    ObservableList<Questions> get() throws SQLException;
+    ObservableList<T> get() throws SQLException;
 
-    T getById(int id) throws  SQLException;
+    ObservableList getById(int id) throws  SQLException;
 
 }

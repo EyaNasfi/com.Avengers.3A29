@@ -1,10 +1,15 @@
 package Controllers;
 
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
-import Controllers.Itemq.*;
+
 import Services.questionservice;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,16 +18,22 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import models.Questions;
-import models.quiz;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
 public class interfacequest {
+
+    ItemRecController irc=new ItemRecController();
+    // Vos autres champs et méthodes existants
+
+
 
     @FXML
     private ResourceBundle resources;
@@ -34,14 +45,15 @@ public class interfacequest {
     @FXML
     private VBox pnitems;
 
-    public void setId(int id) {
-        this.id = id;
+    public void setM(Label m) {
+        this.m = m;
     }
 
-    public int getId() {
-        return id;
+    public Label getM() {
+        return m;
     }
 
+    private Label m;
     public void setN(int n) {
         this.n = n;
     }
@@ -50,10 +62,10 @@ public class interfacequest {
         return n;
     }
 
-    private int n;
-    private int id;
-questionservice rs=new questionservice();
-Itemq s=new Itemq();
+private int n;
+    questionservice rs = new questionservice();
+
+
     private void handleButtonPress(Button button, String selectedOption, String correctAnswer) {
         if (selectedOption.equals(correctAnswer)) {
             System.out.println("Bonne réponse : " + button.getText());
@@ -61,18 +73,29 @@ Itemq s=new Itemq();
             System.out.println("Mauvaise réponse : " + button.getText());
         }
     }
+    // Initialisation du SecurityManager
+private int id;
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @FXML
     void initialize() throws IOException {
+     System.out.println("idquest"+id);
+        //System.out.print ln(getN());
+
         ObservableList<Questions> R = null;
         try {
-            R = rs.get();
+            int k=n;
+            R = rs.get(k);
 
 
             for (int i = 0; i < R.size(); i++) {
 
-                //  final int j = i;
-                Questions q = R.get(i);
-                q.setIdquiz(getId());
+                final int j = i;
+                Questions q = R.get(j);
+               // q.setIdquiz(n);
                 // System.out.println(getId());
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/itemquest.fxml"));
                 Node node = loader.load();
@@ -85,26 +108,6 @@ Itemq s=new Itemq();
                 pnitems.getChildren().add(node);
 
 
-              /*  if (button1.isPressed()) {
-                    System.out.println("button1");
-                    if (op1.equals(q.getAnswer())) {
-                        System.out.println("repose1 correcte");
-                    } else {
-                        System.out.println("reponse1 fausse ");
-                    }
-                } else if (button2.isPressed()) {
-                    if (op2.equals(q.getAnswer())) {
-                        System.out.println("repose2 correcte");
-                    } else {
-                        System.out.println("reponse2 fausse ");
-                    }
-                } else if (button3.isPressed()) {
-                    if (op3.equals(q.getAnswer())) {
-                        System.out.println("repose3 correcte");
-                    } else {
-                        System.out.println("reponse3 fausse ");
-                    }
-                }*/
 
                 Button button1 = (Button) node.lookup("#op1");
                 Button button2 = (Button) node.lookup("#op2");
@@ -115,50 +118,41 @@ Itemq s=new Itemq();
                 button3.setOnAction(event -> handleButtonPress(button3, q.getOp3(), q.getAnswer()));
 
 
-
-
-
             }
-                  /*  if ((s.opchoi() == 1)) {
-            if (q.getAnswer() == q.getOp1()) {
-                System.out.println("reponse 1 vrai");
 
-            } else {
-                System.out.println("reponse 1 fausse");
-            }
-        }
-        if ((s.opchoi() == 2)) {
-            if (q.getAnswer() == q.getOp2()) {
-                System.out.println("reponse 2 vrai");
-
-            } else {
-                System.out.println("reponse 2 fausse");
-            }
-        }
-        if ((s.opchoi() == 3)) {
-            if (q.getAnswer() == q.getOp3()) {
-                System.out.println("reponse 3 vrai");
-
-            } else {
-                System.out.println("reponse 3 fausse");
-            }
-        }*/
-
-            }   catch (SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
-        }}
+        }
+
+    }
+
+    @FXML
+    void translate(ActionEvent event) throws IOException, InterruptedException {
 
 
+    }
 
 
     public void yraja3(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/nvquiz.fxml"));
-        Parent root = loader.load();
-        Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        st.setScene(scene);
-        st.show();
-    }
-}
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText("Êtes-vous sûr de vouloir quitter le quiz ?");
+        alert.setContentText("Vous ne pourrez pas revenir en arrière une fois que vous aurez quitté.");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            // L'utilisateur a confirmé qu'il souhaite quitter le quiz
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/nvquiz.fxml"));
+            Parent root = loader.load();
+            Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            st.setScene(scene);
+            st.show();
+        } else {
+            // L'utilisateur a annulé la fermeture de la fenêtre
+            actionEvent.consume();
+        }
+    }}
+
 
 

@@ -121,24 +121,24 @@ public class questions {
         //System.out.println(qui.getNbrquest());
         Questions q = new Questions();
         for (int i = 0; i < getNbrquestt(); i++) {
-                if (!(i > getNbrquestt())) {
+                if ((i < getNbrquestt())) {
+
                     String qu = this.question.getText();
                     String op1 = this.ecrire1.getText();
                     String op2 = this.ecrire2.getText();
                     String op3 = this.ecrire3.getText();
+                    if (!((op1 == op2) || (op1 == op3) || (op2 == op3))) {
+                        //  System.out.println(Integer.parseInt(q.getQuestion()));
+                        answerbox.getItems().addAll(op1, op2, op3);
+                        //answerbox.setItems(op1,op2,op3);
+                        answerbox.getSelectionModel().getSelectedItem();
+                        answerbox.getValue();
 
-
-                    //  System.out.println(Integer.parseInt(q.getQuestion()));
-                    answerbox.getItems().addAll(op1, op2, op3);
-                    //answerbox.setItems(op1,op2,op3);
-                    answerbox.getSelectionModel().getSelectedItem();
-                    answerbox.getValue();
-                    if (!qu.trim().isEmpty() || !op1.trim().isEmpty() || !op2.trim().isEmpty() || !op3.trim().isEmpty() || answerbox != null) {
-                        if (!(qu.endsWith("?"))) {
-                            String an = answerbox.getValue();
-                            int j = getIdd();
-                            Questions qq = new Questions(op1, op2, op3, an, qu, j);
-                            if ((!(op1 == op2) || !(op1 == op3) || !(op2 == op3))) {
+                        if ((!qu.trim().isEmpty() && !op1.trim().isEmpty() && !op2.trim().isEmpty() && !op3.trim().isEmpty() && answerbox != null)) {
+                            if ((qu.endsWith("?"))) {
+                                String an = answerbox.getValue();
+                                int j = getIdd();
+                                Questions qq = new Questions(op1, op2, op3, an, qu, j);
                                 qs.add1(qq);
                                 System.out.println("ajout avec success");
                                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -152,24 +152,31 @@ public class questions {
                                 ecrire3.clear();
                                 answerbox.getItems().clear();
                             } else {
-
-                                System.out.println("verifier le choix des options ");
                                 Alert alert = new Alert(Alert.AlertType.ERROR);
                                 alert.setTitle("failed");
-                                alert.setContentText("verifier le choix des options ");
+                                alert.setContentText("ajoutez une ?");
                                 alert.showAndWait();
                             }
-                        }}else {
-                        System.out.println("ajoutez une ? ");
+                        } else {
 
+                            System.out.println("remplir toutes les champs  ");
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle("failed");
+                            alert.setContentText("remplir toutes les champs  ");
+                            alert.showAndWait();
+                        }
+                    } else {
+
+                        System.out.println("options doivent etre differentes  ");
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("failed");
+                        alert.setContentText("options doivent etre differentes   ");
+                        alert.showAndWait();
                     }
-
-                }else {
-
-                System.out.println("le quiz est pret");
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setTitle("SUCCES");
-                    alert.setContentText("Quiz crée !! ");
+                }else {System.out.println("quiz pret ");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("failed");
+                    alert.setContentText("quiz pret  ");
                     alert.showAndWait();
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/questions25.fxml"));
                     Parent root = loader.load();
@@ -178,10 +185,15 @@ public class questions {
                     st.setScene(scene);
                     st.show();
 
-            }
 
 
-    }}}
+                        }
+
+
+    }
+                }
+
+        }
 
 
 

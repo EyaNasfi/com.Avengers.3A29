@@ -3,6 +3,10 @@ package models;
 public class Reponses {
     private int idrep;
 
+    public Reponses(int id) {
+        this.idrec=id;
+    }
+
     public void setIdrep(int idrep) {
         this.idrep = idrep;
     }

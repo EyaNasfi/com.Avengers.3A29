@@ -17,7 +17,15 @@ public class Itemq {
     @FXML
     private Label quest;
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    int id;
     @FXML
     private Button op1;
 
@@ -27,19 +35,8 @@ public class Itemq {
     @FXML
     private Button op3;
 
-    public int opchoi(){
-        if (op1.isPressed() )
-        {
-            return 1;
-        } else if (op2.isPressed()) {
-            return 2;
-        } else if (op3.isPressed()) {
-            return 3;
-        }
-        return 0;
-    }
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("/questint.fxml"));
-   interfacequest n = loader.getController();
+
+
 
 
 }
