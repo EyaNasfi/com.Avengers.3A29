@@ -1,4 +1,32 @@
 package controllers;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.imageio.ImageIO;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+import javax.mail.Message;
+
+import java.io.ByteArrayOutputStream;
+import java.net.URL;
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.mail.Session;
+
+import javax.mail.internet.MimeMessage;
+import javax.mail.Message.RecipientType;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,14 +41,41 @@ import services.ServiceSalle2;
 import entities.salleee;
 
 import java.io.IOException;
+import javax.mail.Authenticator;
+
 import java.sql.SQLException;
-import java.util.List;
+import java.util.Properties;
+
 import javafx.scene.control.ListView;
+
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.mail.util.ByteArrayDataSource;
 
 public class SalleManagement {
 
+    @FXML
+    private TextField searchTextField;
+
     public Button afficherDB;
     public ImageView photo;
+    @FXML
+    void initialize(URL location, ResourceBundle resources) {
+        // Set a custom cell factory to display salleee objects in a more organized way
+        sallelistview.setCellFactory(param -> new javafx.scene.control.ListCell<String>() {
+            @Override
+            protected void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+
+                if (empty || item == null) {
+                    setText(null);
+                } else {
+                    // Assuming your salleee objects have a toString method
+                    setText(item);
+                }
+            }
+        });
+    }
 
     @FXML
     void equipement(ActionEvent event) throws IOException {
@@ -32,9 +87,12 @@ public class SalleManagement {
         st.show();
 
     }
-
+    @FXML
+    private TextField userEmail; // Add email TextField
     @FXML
     private TextField matiere;
+    @FXML
+    private PasswordField password;
 
     @FXML
     private TextField iduser;  // Changer de PasswordField à TextField pour iduser
@@ -152,64 +210,181 @@ public class SalleManagement {
     // Handle the exception according to your needs
        }
 
+
 */
-@FXML
+private void sendEmailWithQRCode(String recipientEmail, BufferedImage qrCodeImage) {
+    // Email configuration
+    String host = "smtp.office365.com";
+    String port = "587";
+    String username = "cherif.benhassine@esprit.tn";
+    String password = "Achraf2006+";
+
+    Properties properties = new Properties();
+    properties.put("mail.smtp.host", host);
+    properties.put("mail.smtp.port", port);
+    properties.put("mail.smtp.auth", "true");
+    properties.put("mail.smtp.starttls.enable", "true");
+
+    // Session for email
+    Session session = Session.getInstance(properties, new Authenticator() {
+        protected PasswordAuthentication getPasswordAuthentication() {
+            return new PasswordAuthentication(username, password);
+        }
+    });
+
+    try {
+        // Create a MIME message
+        Message message = new MimeMessage(session);
+        message.setFrom(new InternetAddress(username));
+        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
+        message.setSubject("QR Code for salleee Information");
+
+        // Create the message body
+        BodyPart messageBodyPart = new MimeBodyPart();
+        messageBodyPart.setText("Please find attached QR Code for salleee information.");
+
+        // Create the attachment with the QR code
+        BodyPart attachmentBodyPart = new MimeBodyPart();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ImageIO.write(qrCodeImage, "png", baos);
+        byte[] imageData = baos.toByteArray();
+        DataSource source = new ByteArrayDataSource(imageData, "image/png");
+        attachmentBodyPart.setDataHandler(new DataHandler(source));
+        attachmentBodyPart.setFileName("QRCode.png");
+
+        // Add the parts to the message body
+        Multipart multipart = new MimeMultipart();
+        multipart.addBodyPart(messageBodyPart);
+        multipart.addBodyPart(attachmentBodyPart);
+
+        // Set the message body
+        message.setContent(multipart);
+
+        // Send the message
+        Transport.send(message);
+
+        System.out.println("Email sent successfully with QR Code attachment!");
+
+    } catch (MessagingException | IOException e) {
+        e.printStackTrace();
+        // Handle the exception as needed
+    }
+}
+
+//this is ajouter
+/*
+    @FXML
 void ajouter(ActionEvent event) {
-    // Check if iduser is injected
-    if (iduser == null) {
-        showAlert("ID User Field Missing", "ID User field is not injected.");
+    if (iduser == null ) {
+        showAlert("ID User or Password Field Missing", "ID User or Password field is not injected.");
         return;
     }
 
-    // Retrieve values from the TextFields
     String matiereValue = matiere.getText();
     String iduserValueText = iduser.getText();
+    String userEmailValue = userEmail.getText();
 
-    // Check if iduser is not empty
+
     if (iduserValueText.isEmpty()) {
-        showAlert("ID User Empty", "Please enter a valid ID User.");
-        return; // Exit the method if iduser is empty
+        showAlert("ID User or  Empty", "Please enter valid ID User .");
+        return;
     }
 
-    // Parse iduser as int
     int iduserValue;
     try {
         iduserValue = Integer.parseInt(iduserValueText);
     } catch (NumberFormatException e) {
         showAlert("Invalid ID User", "Please enter a valid numeric ID User.");
-        return; // Exit the method if iduser is not a valid integer
+        return;
     }
 
-    // Validate the matiere
     if (!isValidMatiere(matiereValue)) {
         showAlert("Invalid Matiere", "Please enter a valid matiere (java, web, marketing, design).");
-        return; // Exit the method if matiere is not valid
+        return;
     }
 
-    // Create a new salleee object
-    salleee nouvelleSalle = new salleee(0, iduserValue, matiereValue); // 0 is a placeholder for idsalle
+    salleee nouvelleSalle = new salleee(0, iduserValue, matiereValue, userEmailValue);
 
     try {
-        // Add the new salleee to the database using ServiceSalle
+        SS.ajouter(nouvelleSalle);
+        sendEmailWithQRCode(userEmailValue);
+
+    } catch (SQLException e) {
+        handleSQLException(e);
+    }
+} */
+@FXML
+void ajouter(ActionEvent event) {
+    if (iduser == null) {
+        showAlert("ID User or Password Field Missing", "ID User or Password field is not injected.");
+        return;
+    }
+
+    String matiereValue = matiere.getText();
+    String iduserValueText = iduser.getText();
+    String userEmailValue = userEmail.getText();
+
+    if (iduserValueText.isEmpty()) {
+        showAlert("ID User or Empty", "Please enter a valid ID User.");
+        return;
+    }
+
+    int iduserValue;
+    try {
+        iduserValue = Integer.parseInt(iduserValueText);
+    } catch (NumberFormatException e) {
+        showAlert("Invalid ID User", "Please enter a valid numeric ID User.");
+        return;
+    }
+
+    if (!isValidMatiere(matiereValue)) {
+        showAlert("Invalid Matiere", "Please enter a valid matiere (java, web, marketing, design).");
+        return;
+    }
+
+    salleee nouvelleSalle = new salleee(0, iduserValue, matiereValue, userEmailValue);
+
+    try {
         SS.ajouter(nouvelleSalle);
 
-        // You may add additional logic here based on your requirements
+        // Generate QR Code and get BufferedImage
+        BufferedImage qrCodeImage = generateQRCodeImage(nouvelleSalle.toString());
 
-    }  catch (SQLException e) {
-        e.printStackTrace();
-        System.out.println("SQL State: " + e.getSQLState());
-        System.out.println("Error Code: " + e.getErrorCode());
-        System.out.println("Message: " + e.getMessage());
-        // Handle the exception according to your needs
+        // Send email with QR Code
+        sendEmailWithQRCode(userEmailValue, qrCodeImage);
+
+    } catch (SQLException e) {
+        handleSQLException(e);
     }
 }
+    private BufferedImage generateQRCodeImage(String text) {
+        try {
+            // Create a QR Code writer
+            QRCodeWriter qrCodeWriter = new QRCodeWriter();
+
+            // Set QR Code parameters
+            BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, 200, 200);
+
+            // Create a BufferedImage from the BitMatrix
+            return MatrixToImageWriter.toBufferedImage(bitMatrix);
+        } catch (WriterException e) {
+            e.printStackTrace();
+            // Handle the exception according to your needs
+            return null;
+        }
+    }
+
+
+    private void handleSQLException(SQLException e) {
+    }
+
+    @FXML
 
     // Helper method to validate matiere
+
     private boolean isValidMatiere(String matiere) {
-        // List of valid matiere values
         String[] validMatieres = {"java", "web", "marketing", "design"};
 
-        // Check if matiere is in the list of valid values
         for (String validMatiere : validMatieres) {
             if (validMatiere.equalsIgnoreCase(matiere)) {
                 return true;
@@ -218,6 +393,9 @@ void ajouter(ActionEvent event) {
 
         return false;
     }
+
+
+
 
 
 
@@ -315,6 +493,148 @@ void ajouter(ActionEvent event) {
         alert.setContentText(content);
         alert.showAndWait();
     }
+
+/*
+    @FXML
+    void afficherDB(ActionEvent event) {
+        try {
+            List<salleee> salles = SS.afficher();
+            sallelistview.getItems().clear();
+
+            for (salleee salle : salles) {
+                String displayString = "Idsalle: " + salle.getIdsalle() +
+                        ", Matiere: " + salle.getMatiere() +
+                        ", ID User: " + salle.getIduser() +
+                        ", Email: " + salle.getEmail() ;
+
+                sallelistview.getItems().add(displayString);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    */
+    /*
+@FXML
+void afficherDB(ActionEvent event) {
+    try {
+        List<salleee> salles = SS.afficher();
+        sallelistview.getItems().setAll(String.valueOf(salles));
+    } catch (SQLException e) {
+        showAlert("Error", "An error occurred while fetching the data from the database.");
+        System.out.println(e.getMessage());
+    }
+} */
+
+
+/*
+    void sendConfirmationEmail(String recipientEmail) {
+        Properties properties = new Properties();
+        properties.put("mail.smtp.host", "smtp.office365.com");
+        properties.put("mail.smtp.port", "587");
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.enable", "true");
+
+        // Configure the sending account
+        String senderEmail = "cherif.benhassine@esprit.tn";
+        String password = "Achraf2006+"; // Replace "actual_password" with the real password
+
+        // Create a mail session
+        Session session = Session.getInstance(properties, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(senderEmail, password);
+            }
+
+        });
+
+        try {
+            // Create a message
+            MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(senderEmail));
+            message.addRecipient(RecipientType.TO, new InternetAddress(recipientEmail));
+            message.setSubject("Confirmation de d ajout d un salle");
+            message.setText("Votre salle a été  ajouté.");
+
+            // Send the message
+            Transport.send(message);
+            System.out.println("E-mail de confirmation envoyé avec succès !");
+
+            // Show an alert dialog
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Confirmation");
+            alert.setHeaderText(null);
+            alert.setContentText("E-mail de confirmation envoyé avec succès !");
+            alert.showAndWait();
+        } catch (MessagingException e) {
+            System.out.println("Erreur lors de l'envoi de l'e-mail de confirmation : " + e.getMessage());
+            // Show an alert dialog in case of an error
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erreur");
+            alert.setHeaderText(null);
+            alert.setContentText("Erreur lors de l'envoi de l'e-mail de confirmation : " + e.getMessage());
+            alert.showAndWait();
+        }
+    }
+
+ */
+
+
+    public void userEmail(ActionEvent actionEvent) {
+    }
+
+    public void sendConfirmationEmail(ActionEvent actionEvent) {
+    }
+
+    public void password(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    void search(ActionEvent actionEvent) {
+        String searchTerm = searchTextField.getText().trim().toLowerCase();
+
+        if (searchTerm.isEmpty()) {
+            afficherDB(actionEvent);  // Utilisez votre méthode d'affichage par défaut pour restaurer les données initiales
+            return;
+        }
+
+        ObservableList<String> allSalleStrings = sallelistview.getItems();
+        ObservableList<String> searchResults = FXCollections.observableArrayList();
+
+        for (String salleString : allSalleStrings) {
+            if (salleString.toLowerCase().contains(searchTerm)) {
+                searchResults.add(salleString);
+            }
+        }
+
+        sallelistview.getItems().clear();
+        sallelistview.setItems(searchResults);
+    }
+
+    @FXML
+    void sort(ActionEvent actionEvent) {
+        System.out.println("Tri en cours...");
+
+        ObservableList<String> salles = sallelistview.getItems();
+        salles.sort(Comparator.comparing(salle -> {
+            int matiereIndex = salle.indexOf("Matiere: ");
+            if (matiereIndex != -1) {
+                return salle.substring(matiereIndex + 9);
+            }
+            return salle;
+        }));
+
+        // Affichez les salles triées dans la console
+        salles.forEach(System.out::println);
+
+        // Mettez à jour la ListView après le tri
+        sallelistview.setItems(FXCollections.observableArrayList(salles));
+
+        System.out.println("Tri terminé.");
+    }
+
+
+
     @FXML
     void afficherDB(ActionEvent event) {
         try {
@@ -325,8 +645,8 @@ void ajouter(ActionEvent event) {
 
             // Add each salleee object to the ListView with a custom string representation
             for (salleee salle : salles) {
-                // Customize the string representation to include idsalle, matiere, and iduser
-                String displayString = "Idsalle: " + salle.getIdsalle() + ", Matiere: " + salle.getMatiere() + ", ID User: " + salle.getIduser();
+                // Personnalisez la représentation de chaîne pour exclure l'id
+                String displayString ="IDSalle" + salle.getIdsalle() + ", ID User: " + salle.getIduser()+ "Matiere: " + salle.getMatiere() + ", Email: " + salle.getEmail();
 
                 System.out.println(salle);
                 sallelistview.getItems().add(displayString);
@@ -335,30 +655,35 @@ void ajouter(ActionEvent event) {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+
+
+
+}
+
+    public void quiz(ActionEvent actionEvent) {
     }
 
+    public void reclama(ActionEvent actionEvent) {
+    }
 
-    /* @FXML
-    void afficherDB(ActionEvent event) {
-        try {
-            List<salleee> salles = SS.afficher();
+    public void event(ActionEvent actionEvent) {
+    }
 
-            // Clear any existing items in the ListView
-            sallelistview.getItems().clear();
+    public void formations(ActionEvent actionEvent) {
+    }
 
-            // Add each salleee object to the ListView with a custom string representation
-            for (salleee salle : salles) {
-                // Personnalisez la représentation de chaîne pour exclure l'id
-                String displayString = "Matiere: " + salle.getMatiere() + ", ID User: " + salle.getIduser();
+    public void cours(ActionEvent actionEvent) {
+    }
 
-                System.out.println(salle);
-                sallelistview.getItems().add(displayString);
-            }
-            System.out.println(salles);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    */
+    public void remise(ActionEvent actionEvent) {
+    }
 
+    public void salles(ActionEvent actionEvent) {
+    }
 
+    public void club(ActionEvent actionEvent) {
+    }
+
+    public void verspageadus(ActionEvent actionEvent) {
+    }
 }

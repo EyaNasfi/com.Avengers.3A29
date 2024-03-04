@@ -46,10 +46,10 @@ public class equipement {
 
     @Override
     public String toString() {
-        return "equipement{" +
-                "idequip=" + idequip +
-                ", idsalle=" + idsalle +
-                ", categorie='" + categorie + '\'' +
-                '}';
+        return
+                "\t idequip=" + idequip +
+                "\t idsalle=" + idsalle +
+                "\t categorie='" + categorie + "\n";
+
     }
 }

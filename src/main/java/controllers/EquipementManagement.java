@@ -12,8 +12,11 @@ import services.ServiceEquipement;  // Change the service class
 import entities.equipement;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.ResourceBundle;
+
 import javafx.scene.control.ListView;
 
 public class EquipementManagement {
@@ -257,14 +260,45 @@ void ajouter(ActionEvent event) {
         }
         return null;
     }
+    @FXML
+    void initialize(URL location, ResourceBundle resources) {
+        // Set a custom cell factory to display salleee objects in a more organized way
+        equiplistview.setCellFactory(param -> new javafx.scene.control.ListCell<String>() {
+            @Override
+            protected void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+
+                if (empty || item == null) {
+                    setText(null);
+                } else {
+                    // Assuming your salleee objects have a toString method
+                    setText(item);
+                }
+            }
+        });
+    }
 
     // Helper method to parse the idequip from the string representation of an equipement object
     private int parseIdFromSelectedItem(String selectedItem) {
-        // Assuming your string representation is in the format "equipement{idequip=<idequip>, ...}"
-        int startIndex = selectedItem.indexOf("idequip=") + "idequip=".length();
+        int startIndex = selectedItem.indexOf("idequip:") + "idequip:".length();
         int endIndex = selectedItem.indexOf(",", startIndex);
-        return Integer.parseInt(selectedItem.substring(startIndex, endIndex));
+
+        if (endIndex == -1) {
+            // Si la virgule n'est pas trouvée, prenez la partie restante de la chaîne
+            endIndex = selectedItem.length();
+        }
+
+        String idequipString = selectedItem.substring(startIndex, endIndex).trim();
+
+        try {
+            return Integer.parseInt(idequipString);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            // Gérez l'exception selon vos besoins
+            return -1; // ou une valeur par défaut appropriée
+        }
     }
+
     // Method to set the selected equipement
     public void setSelectedEquipement(equipement selectedEquipement) {
         // Store the selected equipement
@@ -287,11 +321,14 @@ void ajouter(ActionEvent event) {
             // Clear any existing items in the ListView
             equiplistview.getItems().clear();
 
-            // Add each equipement object to the ListView
+            // Add each equipement to the ListView
             for (equipement equip : equipements) {
-                System.out.println(equip);
-                equiplistview.getItems().add(equip.toString());
+                String displayString = "idequip: " + equip.getIdequip() +
+                        ", idsalle: " + equip.getIdsalle() +
+                        ", categorie: " + equip.getCategorie();
+                equiplistview.getItems().add(displayString);
             }
+
             System.out.println(equipements);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -299,8 +336,40 @@ void ajouter(ActionEvent event) {
     }
 
 
+    public void quiz(ActionEvent actionEvent) {
+    }
 
+    public void reclama(ActionEvent actionEvent) {
+    }
 
+    public void event(ActionEvent actionEvent) {
+    }
 
+    public void formations(ActionEvent actionEvent) {
+    }
 
+    public void cours(ActionEvent actionEvent) {
+    }
+
+    public void remise(ActionEvent actionEvent) {
+    }
+
+    public void salle(ActionEvent actionEvent) {
+    }
+
+    public void club(ActionEvent actionEvent) {
+    }
+
+    public void equipement(ActionEvent actionEvent) {
+    }
+
+    public void verspageadus(ActionEvent actionEvent) {
+    }
 }
+
+
+
+
+
+
+

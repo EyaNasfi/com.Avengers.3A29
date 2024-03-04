@@ -24,10 +24,12 @@ public class ServiceSalle2 implements ISalle<salleee> {
                 return;
             }
 
-            String req = "INSERT INTO salle (matiere, iduser) VALUES (?, ?)";
+            String req = "INSERT INTO salle (matiere, iduser, email) VALUES (?, ?, ?)";
             PreparedStatement pre = connection.prepareStatement(req);
             pre.setString(1, salle.getMatiere());
             pre.setInt(2, salle.getIduser());
+            pre.setString(3, salle.getEmail()); // Assuming you have the getEmail() method in salleee class
+
             pre.executeUpdate();
 
             System.out.println("Salle added successfully!");
@@ -48,25 +50,29 @@ public class ServiceSalle2 implements ISalle<salleee> {
         }
     }
 
+
+
     // Helper method to check if a user with the given ID exists
     private boolean userExists(int userId) throws SQLException {
         String query = "SELECT * FROM user WHERE iduser = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, userId);
             try (ResultSet resultSet = statement.executeQuery()) {
-                return resultSet.next(); // Returns true if user with given ID exists
+                return resultSet.next(); // Returns true if the user with the given ID exists
             }
         }
     }
 
-
     @Override
     public void modifier(salleee salle) throws SQLException {
-        String req = "UPDATE salle SET matiere=?, iduser=? WHERE idsalle=?";
+        String req = "UPDATE salle SET matiere=?, iduser=?, email=? WHERE idsalle=?";
         PreparedStatement pre = connection.prepareStatement(req);
         pre.setString(1, salle.getMatiere());
         pre.setInt(2, salle.getIduser());
-        pre.setInt(3, salle.getIdsalle());
+        pre.setString(3, salle.getEmail());
+
+        // Corrected the parameter index for idsalle
+        pre.setInt(4, salle.getIdsalle());
         pre.executeUpdate();
     }
 
@@ -93,21 +99,20 @@ public class ServiceSalle2 implements ISalle<salleee> {
     }
 
 
-    @Override
     public List<salleee> afficher() throws SQLException {
         String req = "SELECT * FROM salle";
-        Statement ste = connection.createStatement();
-        ResultSet res = ste.executeQuery(req);
-        List<salleee> list = new ArrayList<>();
-        while (res.next()) {
-            salleee s = new salleee();
-            s.setIdsalle(res.getInt("idsalle"));
-            s.setMatiere(res.getString("matiere"));
-            s.setIduser(res.getInt("iduser"));
+        try (Statement ste = connection.createStatement(); ResultSet res = ste.executeQuery(req)) {
+            List<salleee> list = new ArrayList<>();
+            while (res.next()) {
+                salleee s = new salleee();
+                s.setIdsalle(res.getInt("idsalle"));
+                s.setMatiere(res.getString("matiere"));
+                s.setIduser(res.getInt("iduser"));
+                s.setEmail(res.getString("email"));
 
-            list.add(s);
-        }
-        System.out.println("list " + list);
-        return list;
-    }
-}
+
+                list.add(s);
+            }
+            System.out.println("list " + list);
+            return list;
+        }}}
