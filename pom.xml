@@ -120,7 +120,8 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
 <<<<<<< HEAD
-            <version>17</version>
+<<<<<<< HEAD
+            <version>21</version>
 =======
             <version>${javafx.version}</version>
         </dependency>
@@ -129,6 +130,9 @@
             <artifactId>javax.mail</artifactId>
             <version>1.6.2</version>
 >>>>>>> gestionSalles
+=======
+            <version>21</version>
+>>>>>>> 2778cc11a236fdaad049637402ff4ca4719d8e91
         </dependency>
     </dependencies>
 
