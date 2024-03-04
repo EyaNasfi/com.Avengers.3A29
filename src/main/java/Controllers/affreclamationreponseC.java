@@ -145,4 +145,49 @@ public class affreclamationreponseC  {
     }
 
 
+    public void reclama(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/reclamationadmin.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
+
+    public void formations(ActionEvent event) {
+    }
+
+    public void event(ActionEvent event) {
+    }
+
+    public void cours(ActionEvent event) {
+    }
+
+    public void remise(ActionEvent event) {
+    }
+
+    public void salle(ActionEvent event) {
+    }
+
+    public void club(ActionEvent event) {
+    }
+
+    public void equipement(ActionEvent event) {
+    }
+
+    public void verspageadus(ActionEvent event) {
+    }
+
+    public void ajouter(ActionEvent event) {
+
+    }
+
+    public void disc(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ajouterreclamation.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
 }

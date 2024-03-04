@@ -142,7 +142,13 @@ public int sc;
         }
 
 
-    public void reclama(ActionEvent event) {
+    public void reclama(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ajouterreclamation.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
 
     }
 
@@ -168,6 +174,21 @@ public int sc;
         Scene scene = new Scene(root);
         st.setScene(scene);
         st.show();
+    }
+
+    public void dispo(ActionEvent event) {
+    }
+
+    public void event(ActionEvent event) {
+    }
+
+    public void profil(ActionEvent event) {
+    }
+
+    public void salles(ActionEvent event) {
+    }
+
+    public void formation(ActionEvent event) {
     }
 }
 

@@ -213,4 +213,48 @@ public int returnnbrquest(){
         }
     }
 
+    public void quiz(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/reclamationadmin.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
+
+    public void ajouter(ActionEvent event) {
+    }
+
+    public void reclama(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/reclamationadmin.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
+
+    public void event(ActionEvent event) {
+    }
+
+    public void formations(ActionEvent event) {
+    }
+
+    public void cours(ActionEvent event) {
+    }
+
+    public void remise(ActionEvent event) {
+    }
+
+    public void salle(ActionEvent event) {
+    }
+
+    public void club(ActionEvent event) {
+    }
+
+    public void equipement(ActionEvent event) {
+    }
+
+    public void verspageadus(ActionEvent event) {
+    }
 }

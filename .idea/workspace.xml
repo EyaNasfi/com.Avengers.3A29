@@ -4,7 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0e5f50e-c6b1-442f-af82-7f82b7fcf6f2" name="Changes" comment="git commit &quot;msg&quot;" />
+    <list default="true" id="b0e5f50e-c6b1-442f-af82-7f82b7fcf6f2" name="Changes" comment="git commit &quot;msg&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/affquestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/affquestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/affreclamationreponseC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/affreclamationreponseC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ajouterreclamation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ajouterreclamation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/quizcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/quizcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/reclamationreponseC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/reclamationreponseC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ajouterreclamation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ajouterreclamation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nvquiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nvquiz.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/questions.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/questions1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/questions1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/questions25.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/questions25.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/quiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/quiz.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rec.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rec.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reclamationadmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reclamationadmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reclamationadmin2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reclamationadmin2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/affquestions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/affquestions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/affreclamationreponseC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/affreclamationreponseC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ajouterreclamation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ajouterreclamation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/questions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/questions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/quiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/reclamationreponseC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/reclamationreponseC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ajouterreclamation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ajouterreclamation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nvquiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nvquiz.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/questions.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/questions1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/questions1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/questions25.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/questions25.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/quiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/quiz.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rec.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rec.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/reclamationadmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/reclamationadmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/reclamationadmin2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/reclamationadmin2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +199,7 @@
       <workItem from="1709467874198" duration="21298000" />
       <workItem from="1709509148185" duration="10627000" />
       <workItem from="1709523687989" duration="2718000" />
-      <workItem from="1709556387094" duration="5086000" />
+      <workItem from="1709556387094" duration="12256000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <option name="closed" value="true" />
