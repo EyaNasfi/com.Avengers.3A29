@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 # Compiled class file
 *.class
 
@@ -24,6 +26,7 @@
 hs_err_pid*
 replay_pid*
 =======
+>>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -61,5 +64,9 @@ build/
 .vscode/
 
 ### Mac OS ###
+<<<<<<< HEAD
+.DS_Store
+=======
 .DS_Store
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
+>>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac

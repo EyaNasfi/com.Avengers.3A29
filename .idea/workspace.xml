@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+    <list default="true" id="338d2e8d-0088-4336-b230-09326ebb8158" name="Changes" comment="" />
+=======
+<<<<<<< HEAD
     <list default="true" id="94583e90-3604-42d9-92a0-81b12649a9ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" afterDir="false" />
 =======
@@ -53,11 +56,26 @@
       <change beforePath="$PROJECT_DIR$/target/classes/utils/mydb.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/mydb.class" afterDir="false" />
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
     </list>
+>>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="azerbenamor" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2cwSnI0MozD9nMxyT4UWt3Qecfm" />
+=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -134,10 +152,26 @@
   <component name="ProjectId" id="2cYgZnazoPtkXkLUhyU1LPCbqvl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
+>>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.HelloApplication.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Maven.Espritify [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "Maven.crud [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "gestionuser",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/khouloud/Desktop/Crud",
+=======
 <<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -191,11 +225,31 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "dev",
     "last_opened_file_path": "C:/Users/Eya/IdeaProjects/Crud",
+>>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+<<<<<<< HEAD
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="tn.esprit.crud.test.HelloApplication" />
+      <module name="crud" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\khouloud\Desktop\openjfx-21.0.2_windows-x64_bin-sdk\javafx-sdk-21.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.crud.test.*" />
+=======
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4352518",
@@ -240,6 +294,7 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
+>>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -247,6 +302,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-3183f394aec4-aba903c2" />
+      </set>
+    </attachedChunks>
+=======
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,10 +333,21 @@
       <item itemvalue="Application.Mainadmin" />
       <item itemvalue="Application.MainFX" />
     </list>
+>>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="338d2e8d-0088-4336-b230-09326ebb8158" name="Changes" comment="" />
+      <created>1709021312471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709021312471</updated>
+      <workItem from="1709021313511" duration="28886000" />
+      <workItem from="1709096507395" duration="1389000" />
+    </task>
+=======
       <changelist id="94583e90-3604-42d9-92a0-81b12649a9ba" name="Changes" comment="" />
       <created>1708976414781</created>
       <option name="number" value="Default" />
@@ -344,11 +424,14 @@
     </task>
     <option name="localTasksCounter" value="3" />
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
+>>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -374,4 +457,5 @@
     <expand />
     <select />
   </component>
+>>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
 </project>
