@@ -4,12 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
+import tn.esprit.crud.models.User;
+import tn.esprit.crud.services.UserService;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import tn.esprit.crud.models.User;
-import tn.esprit.crud.services.UserService;
 import tn.esprit.crud.test.HelloApplication;
 
 import java.io.IOException;
@@ -17,7 +17,8 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class ModifierUser implements Initializable {
+public class frontController implements Initializable {
+
     private ToggleGroup toggleGroup;
     private RadioButton selectedRadioButton;
 
@@ -38,6 +39,10 @@ public class ModifierUser implements Initializable {
 
     @FXML
     private TextField mdpNouv;
+
+    @FXML
+    private Button modifier;
+
     @FXML
     private RadioButton et;
 
@@ -46,16 +51,13 @@ public class ModifierUser implements Initializable {
 
     @FXML
     private RadioButton ad;
-
-
     private UserService userService = new UserService();
 
-
-
     @FXML
-    void modifierUser() {
+    void Modification(ActionEvent event) {
         try {
             // Récupérer les données saisies dans les champs de texte
+
             int id = Integer.parseInt(idMod.getText());
             String nouveauNom = nomNouv.getText();
             String nouveauPrenom = prenomNouv.getText();
@@ -79,51 +81,6 @@ public class ModifierUser implements Initializable {
         }
     }
 
-    // Méthode pour afficher une boîte de dialogue d'information
-    private void afficherMessage(String titre, String contenu) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(titre);
-        alert.setHeaderText(null);
-        alert.setContentText(contenu);
-        alert.showAndWait();
-    }
-
-    // Méthode pour afficher une boîte de dialogue d'erreur
-    private void afficherErreur(String titre, String contenu) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(titre);
-        alert.setHeaderText(null);
-        alert.setContentText(contenu);
-        alert.showAndWait();
-    }
-
-    @FXML
-    void Modification(ActionEvent event) {
-        modifierUser();
-    }
-
-    @FXML
-    void ReturnToAjouter(ActionEvent event) {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/tn/esprit/crud/AfficherUsers.fxml"));
-        try {
-            idMod.getScene().setRoot(fxmlLoader.load());
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    @FXML
-    void VersAfficher(ActionEvent event) {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/tn/esprit/crud/AfficherUsers.fxml"));
-        try {
-            idMod.getScene().setRoot(fxmlLoader.load());
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
-            throw new RuntimeException(e);
-        }
-    }
 
     @FXML
     void VersSupprimer(ActionEvent event) {
@@ -134,17 +91,31 @@ public class ModifierUser implements Initializable {
             System.err.println(e.getMessage());
             throw new RuntimeException(e);
         }
+
     }
+    private void afficherErreur(String titre, String contenu) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(titre);
+        alert.setHeaderText(null);
+        alert.setContentText(contenu);
+        alert.showAndWait();
+    }
+    private void afficherMessage(String titre, String contenu) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titre);
+        alert.setHeaderText(null);
+        alert.setContentText(contenu);
+        alert.showAndWait();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         toggleGroup = new ToggleGroup();
         et.setToggleGroup(toggleGroup);
         fo.setToggleGroup(toggleGroup);
-        ad.setToggleGroup(toggleGroup);
         toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             selectedRadioButton = (RadioButton) newValue;
-
         });
-    }
 
+    }
 }

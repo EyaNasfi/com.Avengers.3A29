@@ -2,23 +2,16 @@ package tn.esprit.crud.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-import tn.esprit.crud.services.UserService;
-import tn.esprit.crud.test.HelloApplication;
 
-import java.io.IOException;
 import java.sql.SQLException;
-
-public class SupprimerUser {
+import tn.esprit.crud.services.UserService;
+public class SuppfronController {
 
     @FXML
-    private TextField supprimerTF; // TextField pour saisir l'ID de l'utilisateur à supprimer
-
+    private TextField supprimerTF;
     private UserService userService = new UserService();
-
-
 
     @FXML
     void supprimerUser(ActionEvent event) {
@@ -47,40 +40,6 @@ public class SupprimerUser {
         alert.setContentText("L'utilisateur a été supprimé avec succès.");
         alert.showAndWait();
 
-    }
-    @FXML
-    void ReturnToAfficher(ActionEvent event) {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/tn/esprit/crud/AfficherUsers.fxml"));
-        try {
-            supprimerTF.getScene().setRoot(fxmlLoader.load());
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    @FXML
-    void VersAjouter(ActionEvent event) {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/tn/esprit/crud/AjouterUser.fxml"));
-            try {
-                supprimerTF.getScene().setRoot(fxmlLoader.load());
-            } catch (IOException e) {
-                System.err.println(e.getMessage());
-                throw new RuntimeException(e);
-            }
-    }
-
-    @FXML
-    void VersModifier(ActionEvent event) {
-
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/tn/esprit/crud/ModifierUser.fxml"));
-                try {
-                    supprimerTF.getScene().setRoot(fxmlLoader.load());
-                } catch (IOException e) {
-                    System.err.println(e.getMessage());
-                    throw new RuntimeException(e);
-                }
     }
 
 }

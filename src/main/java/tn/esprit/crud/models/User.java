@@ -27,7 +27,14 @@ public class User {
         this.mdp = mdp;
         this.role = role;
     }
-
+    public User(int id,String nom, String prenom, String adresse, String email, String mdp) {
+        this.id=id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adresse = adresse;
+        this.email = email;
+        this.mdp = mdp;
+    }
     public int getId() {
         return id;
     }
@@ -87,8 +94,8 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
+
+                " nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", adresse='" + adresse + '\'' +
                 ", email='" + email + '\'' +
