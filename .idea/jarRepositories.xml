@@ -4,6 +4,7 @@
     <remote-repository>
       <option name="id" value="central" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -17,6 +18,8 @@
 >>>>>>> 3469f1f0f8bf4c8a9f4063bd8c1e95fd836e23d7
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
 >>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
+=======
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
@@ -31,6 +34,7 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -44,5 +48,7 @@
 >>>>>>> 3469f1f0f8bf4c8a9f4063bd8c1e95fd836e23d7
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
 >>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
+=======
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
   </component>
 </project>

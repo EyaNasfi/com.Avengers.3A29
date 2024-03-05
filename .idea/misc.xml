@@ -3,35 +3,31 @@
 =======
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   <component name="EntryPointsManager">
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="javafx.fxml.FXML" />
     </list>
   </component>
+<<<<<<< HEAD
 >>>>>>> 3469f1f0f8bf4c8a9f4063bd8c1e95fd836e23d7
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
 >>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
 >>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
+=======
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
         <option value="$PROJECT_DIR$/pom.xml" />
-=======
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/pom.xml" />
-=======
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Crud/pom.xml" />
+<<<<<<< HEAD
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
 >>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
       </list>
@@ -60,4 +56,10 @@
   </component>
 >>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
 >>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
+=======
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="21 (2)" project-jdk-type="JavaSDK" />
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
 </project>

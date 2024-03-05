@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -37,6 +39,11 @@
             <Button layoutX="6.0" layoutY="206.0" mnemonicParsing="false" onAction="#reclama" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Envoyer reclamation" />
             <Button layoutX="6.0" layoutY="248.0" mnemonicParsing="false" onAction="#salles" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Consulter les salles" />
             <Button layoutX="5.0" layoutY="292.0" mnemonicParsing="false" onAction="#formation" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Acheter formations" />
+            <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="64.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/429511356_314309851656071_1715721751443100459_n.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
     </children>

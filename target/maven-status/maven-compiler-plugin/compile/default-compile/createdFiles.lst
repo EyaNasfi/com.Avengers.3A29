@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 models\Club.class
 controllers\ClubManagement$1.class
 services\ClubService.class
@@ -21,31 +22,48 @@ services\IPaiement.class
 test\MainFX.class
 Controller\PaiementManagment.class
 =======
+=======
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
 models\Reponses.class
 models\Questions.class
-Controllers\Itemq.class
 Controllers\quizcontroller$1.class
+Services\IPaiement.class
 Controllers\affreclamationreponseC.class
 Services\questionservice.class
 Services\quizservice.class
-Controllers\ItemRecController.class
-utils\mydb.class
-test\main.class
 Controllers\interfacequest.class
 test\MainFX.class
 Controllers\ajouterreclamation.class
+Services\ServciceRemise.class
+Util\MyDB.class
+Services\reponseservice.class
+module-info.class
+Controllers\affquestions.class
+Controllers\popupC.class
+Controllers\quizcontroller.class
+models\Reclamation.class
+Controllers\Itemq.class
+Controllers\ItemRecController.class
+entity\Paiement.class
+test\main.class
+Controller\PaiementManagment.class
 Services\questionservice$1.class
 Services\reclamationservice.class
 models\quiz.class
 Services\IService.class
 Controllers\itemrecControlleradmin.class
-Services\reponseservice.class
+entity\Remise.class
+Controller\affichage.class
+utils\MyDB.class
 Controllers\questions.class
-Controllers\affquestions.class
 Controllers\reclamationreponseC.class
-Controllers\popupC.class
 Controllers\quiz.class
+<<<<<<< HEAD
 Controllers\quizcontroller.class
 models\Reclamation.class
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
 >>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
+=======
+Controller\RemiseManagment.class
+Services\ServicePaiement.class
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793

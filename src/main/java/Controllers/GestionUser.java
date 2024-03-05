@@ -1,10 +1,10 @@
-package tn.esprit.crud.controllers;
+package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import tn.esprit.crud.test.HelloApplication;
+import test.HelloApplication;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public class GestionUser {
     private Button ajout;
     @FXML
     void VersAfficher(ActionEvent event) {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/tn/esprit/crud/AfficherUsers.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/AfficherUsers.fxml"));
         try {
                 ajout.getScene().setRoot(fxmlLoader.load());
         } catch (IOException e) {

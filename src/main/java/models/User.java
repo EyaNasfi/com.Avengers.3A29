@@ -1,4 +1,4 @@
-package tn.esprit.crud.models;
+package models;
 
 public class User {
     private int id;

@@ -1,4 +1,4 @@
-package tn.esprit.crud.controllers;
+package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,7 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import java.sql.SQLException;
-import tn.esprit.crud.services.UserService;
+import Services.UserService;
 public class SuppfronController {
 
     @FXML

@@ -1,16 +1,20 @@
-package tn.esprit.crud.controllers;
+package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-import tn.esprit.crud.models.User;
-import tn.esprit.crud.services.UserService;
+import javafx.stage.Stage;
+import models.User;
+import Services.UserService;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import tn.esprit.crud.test.HelloApplication;
+import test.HelloApplication;
 
 import java.io.IOException;
 import java.net.URL;
@@ -67,7 +71,7 @@ public class frontController implements Initializable {
 
 
             // Créer un objet User avec les nouvelles valeurs
-            User user = new User(id, nouveauNom, nouveauPrenom, nouvelleAdresse, nouveauEmail, nouveauMdp,selectedRadioButton.getText()  );
+            User user = new User(id, nouveauNom, nouveauPrenom, nouvelleAdresse, nouveauEmail, nouveauMdp, selectedRadioButton.getText());
 
             // Mettre à jour l'utilisateur dans la base de données
             userService.modifier(user);
@@ -93,6 +97,7 @@ public class frontController implements Initializable {
         }
 
     }
+
     private void afficherErreur(String titre, String contenu) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(titre);
@@ -100,6 +105,7 @@ public class frontController implements Initializable {
         alert.setContentText(contenu);
         alert.showAndWait();
     }
+
     private void afficherMessage(String titre, String contenu) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titre);
@@ -110,12 +116,69 @@ public class frontController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        toggleGroup = new ToggleGroup();
+      /*  toggleGroup = new ToggleGroup();
         et.setToggleGroup(toggleGroup);
         fo.setToggleGroup(toggleGroup);
         toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             selectedRadioButton = (RadioButton) newValue;
-        });
+        });*/
 
+    }
+
+    public void quiz(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/nvquiz.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
+
+    public void ajouter(ActionEvent actionEvent) {
+    }
+
+    public void reclama(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ajouterreclamation.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+    }
+
+    public void event(ActionEvent actionEvent) {
+    }
+
+    public void formations(ActionEvent actionEvent) {
+    }
+
+    public void cours(ActionEvent actionEvent) {
+    }
+
+    public void remise(ActionEvent actionEvent) {
+    }
+
+    public void salle(ActionEvent actionEvent) {
+    }
+
+    public void club(ActionEvent actionEvent) {
+    }
+
+    public void equipement(ActionEvent actionEvent) {
+    }
+
+    public void verspageadus(ActionEvent actionEvent) {
+    }
+
+    public void dispo(ActionEvent event) {
+    }
+
+    public void profil(ActionEvent event) {
+    }
+
+    public void salles(ActionEvent event) {
+    }
+
+    public void formation(ActionEvent event) {
     }
 }

@@ -2,11 +2,15 @@
 <project version="4">
   <component name="CompilerConfiguration">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="9ariny-Academy" />
       </profile>
     </annotationProcessing>
@@ -14,6 +18,11 @@
       <module name="StudyLand" target="17" />
       <module name="workshoppidev" target="17" />
 =======
+=======
+        <module name="crud" />
+      </profile>
+    </annotationProcessing>
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
     <bytecodeTargetLevel>
       <module name="Avangers" target="21" />
 >>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
