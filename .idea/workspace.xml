@@ -14,9 +14,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/resources/reclamationadmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reclamationadmin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/reclamationadmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/reclamationadmin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+=======
+>>>>>>> 2ce28e48a6a6c7f8790f0c3a6f92975f2c7602e1
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +57,33 @@
       <created>1709604610413</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1709604610413</updated>
       <workItem from="1709604611543" duration="34000" />
       <workItem from="1709604662060" duration="20000" />
       <workItem from="1709604726839" duration="43000" />
+=======
+      <updated>1708293985302</updated>
+      <workItem from="1708293986309" duration="34266000" />
+      <workItem from="1708391228827" duration="4265000" />
+      <workItem from="1708396119367" duration="2233000" />
+      <workItem from="1708399830586" duration="433000" />
+      <workItem from="1708400279633" duration="78000" />
+      <workItem from="1708418577206" duration="47809000" />
+      <workItem from="1708633766887" duration="63352000" />
+      <workItem from="1708823167142" duration="763000" />
+      <workItem from="1708864684640" duration="34316000" />
+      <workItem from="1708943376510" duration="41935000" />
+      <workItem from="1709042539604" duration="31313000" />
+      <workItem from="1709110118520" duration="4514000" />
+      <workItem from="1709196226232" duration="29543000" />
+      <workItem from="1709266822590" duration="1643000" />
+      <workItem from="1709301876109" duration="46705000" />
+      <workItem from="1709467874198" duration="21298000" />
+      <workItem from="1709509148185" duration="10627000" />
+      <workItem from="1709523687989" duration="2718000" />
+      <workItem from="1709556387094" duration="13771000" />
+>>>>>>> 2ce28e48a6a6c7f8790f0c3a6f92975f2c7602e1
     </task>
     <servers />
   </component>
