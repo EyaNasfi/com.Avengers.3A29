@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="824.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.affichage">
+    <children>
+       <TableView fx:id="afficher" layoutX="261.0" layoutY="57.0" prefHeight="200.0" prefWidth="260.0">
+          <columns>
+             <TableColumn fx:id="modeColumn" prefWidth="129.60003662109375" text="mode de paiement" />
+             <TableColumn fx:id="montantColumn" prefWidth="129.5999755859375" text="montant" />
+          </columns>
+       </TableView>
+      <Button fx:id="generatePDFButton" layoutX="655.0" layoutY="490.0" text="Generate PDF" />
+      <Pane prefHeight="593.0" prefWidth="192.0" style="-fx-background-color: #6495ED;">
+         <children>
+            <Button layoutX="6.0" layoutY="164.0" mnemonicParsing="false" onAction="#quiz" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Faire un quiz" />
+            <Button layoutX="5.0" layoutY="335.0" mnemonicParsing="false" onAction="#dispo" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Formations dispo" />
+            <Label layoutX="2.0" layoutY="28.0" prefHeight="11.0" prefWidth="81.0" text="9ariny-Academy" textFill="#151c5c">
+               <font>
+                  <Font name="Arial" size="7.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="111.0" text="Nasfi Eya" />
+            <Button cancelButton="true" defaultButton="true" layoutX="-1.0" layoutY="563.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="    Déconnecté" textAlignment="RIGHT" wrapText="true" />
+            <Button layoutX="6.0" layoutY="376.0" mnemonicParsing="false" onAction="#event" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Evenements disponibles" />
+            <Label layoutX="109.0" layoutY="2.0" prefHeight="11.0" prefWidth="81.0" text="Bienvenue etudiant" textFill="#151c5c">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Label>
+            <Button layoutX="3.0" layoutY="421.0" mnemonicParsing="false" onAction="#profil" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Profil" />
+            <Button layoutX="6.0" layoutY="206.0" mnemonicParsing="false" onAction="#reclama" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Envoyer reclamation" />
+            <Button layoutX="6.0" layoutY="248.0" mnemonicParsing="false" onAction="#salles" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Consulter les salles" />
+            <Button layoutX="5.0" layoutY="292.0" mnemonicParsing="false" onAction="#formation" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Acheter formations" />
+            <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="64.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/429511356_314309851656071_1715721751443100459_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+    </children>
+</Pane>
