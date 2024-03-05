@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 models\Club.class
 controllers\ClubManagement$1.class
 services\ClubService.class
@@ -5,3 +6,46 @@ controllers\EventListView.class
 services\Crudc.class
 test\MainFX.class
 controllers\ClubManagement.class
+=======
+<<<<<<< HEAD
+entity\Remise.class
+services\ServicePaiement.class
+Controller\affichage.class
+module-info.class
+services\ServciceRemise.class
+entity\Paiement.class
+test\main.class
+Util\MyDB.class
+Controller\RemiseManagment.class
+services\IPaiement.class
+test\MainFX.class
+Controller\PaiementManagment.class
+=======
+models\Reponses.class
+models\Questions.class
+Controllers\Itemq.class
+Controllers\quizcontroller$1.class
+Controllers\affreclamationreponseC.class
+Services\questionservice.class
+Services\quizservice.class
+Controllers\ItemRecController.class
+utils\mydb.class
+test\main.class
+Controllers\interfacequest.class
+test\MainFX.class
+Controllers\ajouterreclamation.class
+Services\questionservice$1.class
+Services\reclamationservice.class
+models\quiz.class
+Services\IService.class
+Controllers\itemrecControlleradmin.class
+Services\reponseservice.class
+Controllers\questions.class
+Controllers\affquestions.class
+Controllers\reclamationreponseC.class
+Controllers\popupC.class
+Controllers\quiz.class
+Controllers\quizcontroller.class
+models\Reclamation.class
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
+>>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac

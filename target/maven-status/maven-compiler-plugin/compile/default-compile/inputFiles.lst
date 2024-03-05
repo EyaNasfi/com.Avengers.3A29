@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\services\crud.java
 C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\services\eventservice.java
 C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\test\MainFX.java
@@ -10,3 +11,47 @@ C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\services\Cru
 C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\models\Club.java
 C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\models\event.java
 C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\controllers\eventmangment.java
+=======
+<<<<<<< HEAD
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Util\MyDB.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\entity\Paiement.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\module-info.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\IPaiement.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\ServicePaiement.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\test\MainFX.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\entity\Remise.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\affichage.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\ServciceRemise.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\PaiementManagment.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\RemiseManagment.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\test\main.java
+=======
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\quizservice.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\questionservice.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\Questions.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\utils\mydb.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\ItemRecController.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\ContactController.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\Itemq.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\BadWordFilterService.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\affquestions.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\quiz.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\test\MainFX.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\Reponses.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\reclamationservice.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\Reclamation.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\quiz.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\ajouterreclamation.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\quizcontroller.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\test\main.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\itemrecControlleradmin.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\reponseservice.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\affreclamationreponseC.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\reclamationreponseC.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\popupC.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\interfacequest.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\questions.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\popupppC.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\IService.java
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
+>>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac

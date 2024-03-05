@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+<<<<<<< HEAD
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -12,6 +13,10 @@
     <bytecodeTargetLevel>
       <module name="StudyLand" target="17" />
       <module name="workshoppidev" target="17" />
+=======
+    <bytecodeTargetLevel>
+      <module name="Avangers" target="21" />
+>>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
     </bytecodeTargetLevel>
   </component>
 </project>
