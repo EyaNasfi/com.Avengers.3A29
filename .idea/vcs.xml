@@ -5,6 +5,10 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/com.Avengers.3A29" vcs="Git" />
 =======
+<<<<<<< HEAD
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/com.Avengers.3A29" vcs="Git" />
+=======
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
 <<<<<<< HEAD
 =======
@@ -16,5 +20,6 @@
 >>>>>>> 3469f1f0f8bf4c8a9f4063bd8c1e95fd836e23d7
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
 >>>>>>> 71e615b6e1a7c84838160bbddec79eec94dea1ac
+>>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
   </component>
 </project>

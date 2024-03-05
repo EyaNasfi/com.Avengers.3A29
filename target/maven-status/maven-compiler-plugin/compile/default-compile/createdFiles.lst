@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+models\Club.class
+controllers\ClubManagement$1.class
+services\ClubService.class
+controllers\EventListView.class
+services\Crudc.class
+test\MainFX.class
+controllers\ClubManagement.class
+=======
+<<<<<<< HEAD
 entity\Remise.class
 services\ServicePaiement.class
 Controller\affichage.class
@@ -39,3 +48,4 @@ Controllers\quiz.class
 Controllers\quizcontroller.class
 models\Reclamation.class
 >>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
+>>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
