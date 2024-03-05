@@ -1,5 +1,7 @@
 package tn.esprit.crud.services;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import tn.esprit.crud.models.User;
 import tn.esprit.crud.utils.MyDatabase;
 
@@ -28,15 +30,14 @@ public class UserService implements IServices<User> {
 
     @Override
     public void modifier(User user) throws SQLException {
-        String req = "UPDATE user SET nom = ?, prenom = ?, adresse = ?, email = ? , mdp = ? , role= ? WHERE id = ?";
+        String req = "UPDATE user SET nom = ?, prenom = ?, adresse = ?, email = ? , mdp = ? WHERE id = ?";
         PreparedStatement us = connection.prepareStatement(req);
         us.setString(1, user.getNom());
         us.setString(2, user.getPrenom());
         us.setString(3, user.getAdresse());
         us.setString(4, user.getEmail());
         us.setString(5, user.getMdp());
-        us.setString(6, user.getrole());
-        us.setInt(7, user.getId());
+        us.setInt(6, user.getId());
         us.executeUpdate();
     }
 
@@ -56,10 +57,10 @@ public class UserService implements IServices<User> {
 
 
     @Override
-    public List<User> recupperer() throws SQLException {
-        List<User> users = new ArrayList<>();
+    public ObservableList<User> recupperer() throws SQLException {
+        ObservableList<User> users = FXCollections.observableArrayList();
         String req = "SELECT * FROM user";
-        Statement us = connection.createStatement();
+        PreparedStatement us = connection.prepareStatement(req);
         ResultSet rs = us.executeQuery(req);
 
 
@@ -81,10 +82,10 @@ public class UserService implements IServices<User> {
 
     }
 
-    public boolean authenticateUser(String name, String pass) {
-        String query = "SELECT * FROM user WHERE nom = ? AND mdp = ?";
+    public boolean authenticateUser(String email, String pass) {
+        String query = "SELECT * FROM user WHERE email = ? AND mdp = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, name);
+            statement.setString(1, email);
             statement.setString(2, pass);
 
             ResultSet resultSet = statement.executeQuery();
@@ -100,7 +101,7 @@ public class UserService implements IServices<User> {
     public String role(int id) {
         try {
 
-            PreparedStatement stmt1 = connection.prepareStatement("SELECT role FROM utilisateur where id=?");
+            PreparedStatement stmt1 = connection.prepareStatement("SELECT role FROM user where id=?");
             stmt1.setInt(1, id);
 
             ResultSet rs = stmt1.executeQuery();
@@ -131,6 +132,80 @@ public class UserService implements IServices<User> {
         return list;
     }
 
+    public User getUserByEmail(String email) throws SQLException {
 
+        String req = "SELECT * FROM user WHERE email = ?";
+        PreparedStatement pstmt = connection.prepareStatement(req);
+        pstmt.setString(1, email);
+        ResultSet rs = pstmt.executeQuery();
+        if (rs.next()) {
+            User p = new User(rs.getInt("id"),rs.getString("nom"),rs.getString("prenom"),rs.getString("email"),rs.getString("adresse"),
+                    rs.getString("mdp"),rs.getString("role"));
+            return p;
+        } else {
+            return null; // no person found with this id
+        }
+    }
+    public int getIdByEmail(String email) throws SQLException {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        int userId = -1; // Default value if user is not found or there's an error
 
+        try {
+            conn = MyDatabase.getInstance().getConnection();
+            String query = "SELECT id FROM users WHERE email = ?";
+            stmt = conn.prepareStatement(query);
+            stmt.setString(1, email);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                userId = rs.getInt("id");
+            }
+        } catch (SQLException e) {
+            // Handle SQLException
+            e.printStackTrace();
+        } finally {
+            // Close resources
+            if (rs != null) rs.close();
+            if (stmt != null) stmt.close();
+            if (conn != null) conn.close();
+        }
+
+        return userId;
+    }
+    public int idg(String email) {
+        try {
+
+            PreparedStatement stmt1 = connection.prepareStatement("SELECT id FROM user where email=?");
+            stmt1.setString(1, email);
+
+            ResultSet rs = stmt1.executeQuery();
+
+            while (rs.next()) {
+                return rs.getInt("id");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+    public String emailg(int id) {
+        try {
+
+            PreparedStatement stmt1 = connection.prepareStatement("SELECT email FROM user where id=?");
+            stmt1.setInt(1, id);
+
+            ResultSet rs = stmt1.executeQuery();
+
+            while (rs.next()) {
+                return rs.getString("email");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
