@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 entity\Remise.class
 services\ServicePaiement.class
 Controller\affichage.class
@@ -10,3 +11,31 @@ Controller\RemiseManagment.class
 services\IPaiement.class
 test\MainFX.class
 Controller\PaiementManagment.class
+=======
+models\Reponses.class
+models\Questions.class
+Controllers\Itemq.class
+Controllers\quizcontroller$1.class
+Controllers\affreclamationreponseC.class
+Services\questionservice.class
+Services\quizservice.class
+Controllers\ItemRecController.class
+utils\mydb.class
+test\main.class
+Controllers\interfacequest.class
+test\MainFX.class
+Controllers\ajouterreclamation.class
+Services\questionservice$1.class
+Services\reclamationservice.class
+models\quiz.class
+Services\IService.class
+Controllers\itemrecControlleradmin.class
+Services\reponseservice.class
+Controllers\questions.class
+Controllers\affquestions.class
+Controllers\reclamationreponseC.class
+Controllers\popupC.class
+Controllers\quiz.class
+Controllers\quizcontroller.class
+models\Reclamation.class
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc

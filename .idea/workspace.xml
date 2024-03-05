@@ -4,8 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="94583e90-3604-42d9-92a0-81b12649a9ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" afterDir="false" />
+=======
+    <list default="true" id="b0e5f50e-c6b1-442f-af82-7f82b7fcf6f2" name="Changes" comment="git commit &quot;msg&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/affreclamationreponseC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/affreclamationreponseC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/quizcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/quizcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/reclamationreponseC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/reclamationreponseC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/questionservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/questionservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/quizservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/quizservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/reclamationservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/reclamationservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/reponseservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/reponseservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/EquipementManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/EquipementManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SalleManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SalleManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/IEquipement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/IEquipement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ISalle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ISalle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ServiceEquipement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ServiceEquipement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ServiceSalle2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ServiceSalle2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/MainFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/mydb.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/EquipementManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/EquipementManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/salleManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/salleManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/EquipementManagement$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/EquipementManagement$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/EquipementManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/EquipementManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SalleManagement$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SalleManagement$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SalleManagement$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SalleManagement$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/SalleManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/SalleManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/affreclamationreponseC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/affreclamationreponseC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/questions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/questions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/quiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/quizcontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/IEquipement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/IEquipement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/ISalle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ISalle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/ServiceEquipement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ServiceEquipement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/ServiceSalle2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ServiceSalle2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/questionservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/questionservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/quizservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/quizservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/reclamationservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/reclamationservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/reponseservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/reponseservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/MainFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/MainFX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/mydb.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/mydb.class" afterDir="false" />
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,13 +61,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< HEAD
         <option value="Class" />
         <option value="Interface" />
         <option value="FxmlFile" />
+=======
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="module-info" />
+        <option value="Interface" />
+        <option value="Class" />
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< HEAD
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -38,10 +93,52 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+=======
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <branch-grouping />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EyaNasfi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d24da2d9-3613-478b-ae6e-f3d87784185f" />
+        <option name="url" value="https://github.com/EyaNasfi/com.Avengers.3A29.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2cYgZnazoPtkXkLUhyU1LPCbqvl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
@@ -85,18 +182,85 @@
     <configuration name="MainFX" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="test.MainFX" />
       <module name="Avangers" />
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/Eya/IdeaProjects/Crud",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.4352518",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.MainFX">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Main" />
+      <module name="reclamations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Mainadmin" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="test.Mainadmin" />
       <module name="Avangers" />
+=======
+    <configuration name="MainFX" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="jbr-17 (2)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="test.MainFX" />
+      <module name="reclamations" />
+      <option name="VM_PARAMETERS" value=" --module-path &quot;C:\Users\Eya\.jdks\javafx-sdk-21.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.main" />
+      <module name="reclamations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+<<<<<<< HEAD
       <item itemvalue="Application.Mainadmin" />
       <item itemvalue="Application.MainFX" />
     </list>
@@ -116,13 +280,95 @@
       <workItem from="1709384694781" duration="5553000" />
       <workItem from="1709489708933" duration="19971000" />
     </task>
+=======
+      <item itemvalue="Application.MainFX" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Eya\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0e5f50e-c6b1-442f-af82-7f82b7fcf6f2" name="Changes" comment="" />
+      <created>1708293985302</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708293985302</updated>
+      <workItem from="1708293986309" duration="34266000" />
+      <workItem from="1708391228827" duration="4265000" />
+      <workItem from="1708396119367" duration="2233000" />
+      <workItem from="1708399830586" duration="433000" />
+      <workItem from="1708400279633" duration="78000" />
+      <workItem from="1708418577206" duration="47809000" />
+      <workItem from="1708633766887" duration="63352000" />
+      <workItem from="1708823167142" duration="763000" />
+      <workItem from="1708864684640" duration="34316000" />
+      <workItem from="1708943376510" duration="41935000" />
+      <workItem from="1709042539604" duration="31313000" />
+      <workItem from="1709110118520" duration="4514000" />
+      <workItem from="1709196226232" duration="29543000" />
+      <workItem from="1709266822590" duration="1643000" />
+      <workItem from="1709301876109" duration="46705000" />
+      <workItem from="1709467874198" duration="21298000" />
+      <workItem from="1709509148185" duration="10627000" />
+      <workItem from="1709523687989" duration="2718000" />
+      <workItem from="1709556387094" duration="13771000" />
+      <workItem from="1709593648570" duration="52000" />
+      <workItem from="1709611475541" duration="21000" />
+      <workItem from="1709611513468" duration="2964000" />
+    </task>
+    <task id="LOCAL-00001" summary="git commit">
+      <option name="closed" value="true" />
+      <created>1708816567419</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708816567419</updated>
+    </task>
+    <task id="LOCAL-00002" summary="git commit &quot;msg&quot;">
+      <option name="closed" value="true" />
+      <created>1709119043782</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709119043782</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git commit" />
+    <MESSAGE value="git commit &quot;msg&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="git commit &quot;msg&quot;" />
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
