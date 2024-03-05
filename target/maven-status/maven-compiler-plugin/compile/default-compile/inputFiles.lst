@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Util\MyDB.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\entity\Paiement.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\module-info.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\IPaiement.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\ServicePaiement.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\test\MainFX.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\entity\Remise.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\affichage.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\ServciceRemise.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\PaiementManagment.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\RemiseManagment.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\test\main.java
+=======
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\quizservice.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\questionservice.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\Questions.java
@@ -25,3 +39,4 @@ C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\interfacequest.
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\questions.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\popupppC.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\IService.java
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+entity\Remise.class
+services\ServicePaiement.class
+Controller\affichage.class
+module-info.class
+services\ServciceRemise.class
+entity\Paiement.class
+test\main.class
+Util\MyDB.class
+Controller\RemiseManagment.class
+services\IPaiement.class
+test\MainFX.class
+Controller\PaiementManagment.class
+=======
 models\Reponses.class
 models\Questions.class
 Controllers\Itemq.class
@@ -24,3 +38,4 @@ Controllers\popupC.class
 Controllers\quiz.class
 Controllers\quizcontroller.class
 models\Reclamation.class
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc

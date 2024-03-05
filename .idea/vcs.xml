@@ -3,10 +3,13 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/Crud" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Crud/com.Avengers.3A29" vcs="Git" />
 =======
     <mapping directory="$PROJECT_DIR$/com.Avengers.3A29" vcs="Git" />
 >>>>>>> 3469f1f0f8bf4c8a9f4063bd8c1e95fd836e23d7
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
   </component>
 </project>

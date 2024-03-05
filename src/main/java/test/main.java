@@ -1,4 +1,10 @@
 package test;
+<<<<<<< HEAD
+
+import entity.Remise;
+import javafx.collections.ObservableList;
+import services.ServciceRemise;
+=======
 import Controllers.ajouterreclamation;
 import Services.questionservice;
 import Services.quizservice;
@@ -7,10 +13,18 @@ import javafx.collections.ObservableList;
 import models.Reclamation;
 import models.Reponses;
 import models.quiz;
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
 
 import java.sql.SQLException;
 
 public class main {
+<<<<<<< HEAD
+    public static void main(String[] args) throws SQLException, SQLException {
+        ServciceRemise rs=new ServciceRemise();
+        ObservableList<Remise> reponses = rs.afficher();
+        System.out.println(reponses);
+        //  System.out.println(rs.getAll());
+=======
     public static void main(String[] args) throws SQLException {
         reponseservice rs=new reponseservice();
         ObservableList<Reponses> reponses = rs.getAll();
@@ -23,6 +37,7 @@ public class main {
             System.out.println();
         }
       //  System.out.println(rs.getAll());
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
 
 
     }
