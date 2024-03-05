@@ -3,6 +3,14 @@
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
       <option name="id" value="central" />
+<<<<<<< HEAD
+=======
+      <option name="name" value="central" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+>>>>>>> 3469f1f0f8bf4c8a9f4063bd8c1e95fd836e23d7
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
@@ -16,5 +24,13 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+<<<<<<< HEAD
+=======
+    <remote-repository>
+      <option name="id" value="gluon-releases" />
+      <option name="name" value="gluon-releases" />
+      <option name="url" value="https://nexus.gluonhq.com/nexus/content/repositories/releases" />
+    </remote-repository>
+>>>>>>> 3469f1f0f8bf4c8a9f4063bd8c1e95fd836e23d7
   </component>
 </project>
