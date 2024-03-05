@@ -1,4 +1,4 @@
-package controllers;
+package Controllers;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import javax.activation.DataHandler;
@@ -37,7 +37,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import services.ServiceSalle2;
+import Services.ServiceSalle2;
 import entities.salleee;
 
 import java.io.IOException;
@@ -54,6 +54,22 @@ import javax.mail.util.ByteArrayDataSource;
 
 public class SalleManagement {
 
+    @FXML
+    private TextField userEmail; // Add email TextField
+    @FXML
+    private TextField matiere;
+    @FXML
+    private PasswordField password;
+
+    @FXML
+    private TextField iduser;  // Changer de PasswordField à TextField pour iduser
+
+    @FXML
+    private ListView<String> sallelistview;
+
+    private ServiceSalle2 SS = new ServiceSalle2();
+
+    private salleee selectedSalle; // Store the selected salle
     @FXML
     private TextField searchTextField;
 
@@ -78,6 +94,85 @@ public class SalleManagement {
     }
 
     @FXML
+    void afficherDB() {
+    }
+
+
+
+    @FXML
+    void ajouter() {
+
+    }
+
+    @FXML
+    void club() {
+
+    }
+
+    @FXML
+    void cours() {
+
+    }
+
+    @FXML
+    void equipement() {
+
+    }
+
+    @FXML
+    void event() {
+
+    }
+
+    @FXML
+    void formations() {
+
+    }
+
+    @FXML
+    void modifier() {
+
+    }
+
+    @FXML
+    void quiz() {
+
+    }
+
+    @FXML
+    void reclama() {
+
+    }
+
+    @FXML
+    void remise() {
+
+    }
+
+    @FXML
+    void salles() {
+
+    }
+
+    @FXML
+    void search() {
+
+    }
+
+
+
+    @FXML
+    void supprimer( ) {
+
+    }
+
+    @FXML
+    void verspageadus( ) {
+
+    }
+
+
+    @FXML
     void equipement(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/EquipementManagement.fxml"));
         Parent root = loader.load();
@@ -87,22 +182,7 @@ public class SalleManagement {
         st.show();
 
     }
-    @FXML
-    private TextField userEmail; // Add email TextField
-    @FXML
-    private TextField matiere;
-    @FXML
-    private PasswordField password;
 
-    @FXML
-    private TextField iduser;  // Changer de PasswordField à TextField pour iduser
-
-    @FXML
-    private ListView<String> sallelistview;
-
-    private ServiceSalle2 SS = new ServiceSalle2();
-
-    private salleee selectedSalle; // Store the selected salle
 
     @FXML
     void modifier(ActionEvent event) {
@@ -660,10 +740,22 @@ void afficherDB(ActionEvent event) {
 
 }
 
-    public void quiz(ActionEvent actionEvent) {
+    public void quiz(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/quiz.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
     }
 
-    public void reclama(ActionEvent actionEvent) {
+    public void reclama(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/reclamationadmin.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
     }
 
     public void event(ActionEvent actionEvent) {

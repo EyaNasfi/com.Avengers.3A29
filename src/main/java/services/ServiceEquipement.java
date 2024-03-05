@@ -1,4 +1,4 @@
-package services;
+package Services;
 
 import entities.equipement;  // Import the modified entity class
 import utils.MyDB;
@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServiceEquipement implements IEquipement<equipement> {  // Rename the service class
+public class ServiceEquipement implements Services.IEquipement<equipement> {  // Rename the service class
 
     private Connection connection;
 

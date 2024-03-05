@@ -4,7 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import models.Questions;
 import models.quiz;
-import utils.mydb;
+import utils.MyDB;
 
 import java.sql.*;
 
@@ -12,7 +12,7 @@ public class questionservice implements IService<Questions> {
     private Connection connection;
 
     public questionservice() {
-        connection = mydb.getInstance().getCnx();
+        connection = MyDB.getInstance().getConnection();
     }
 
     public void add1(Questions questions) throws SQLException {

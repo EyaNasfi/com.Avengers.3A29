@@ -4,14 +4,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 import models.quiz;
-import utils.mydb;
+import utils.MyDB;
+
 
 import java.sql.*;
 
 public class quizservice implements IService<quiz> {
 
     public quizservice(){
-        connection = mydb.getInstance().getCnx();
+        connection = MyDB.getInstance().getConnection();
     }
 
     private Connection connection;

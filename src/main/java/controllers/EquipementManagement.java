@@ -1,4 +1,4 @@
-package controllers;
+package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import services.ServiceEquipement;  // Change the service class
+import Services.ServiceEquipement;  // Change the service class
 import entities.equipement;
 
 import java.io.IOException;
@@ -336,10 +336,22 @@ void ajouter(ActionEvent event) {
     }
 
 
-    public void quiz(ActionEvent actionEvent) {
+    public void quiz(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/quiz.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
     }
 
-    public void reclama(ActionEvent actionEvent) {
+    public void reclama(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/reclamationadmin.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
     }
 
     public void event(ActionEvent actionEvent) {

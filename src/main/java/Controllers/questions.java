@@ -249,7 +249,13 @@ public class questions {
     }
 
     @FXML
-    void salle(ActionEvent event) {
+    void salle(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/salleManagement.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
 
     }
 

@@ -1,4 +1,4 @@
-package services;
+package Services;
 
 import entities.salleee;
 import utils.MyDB;
@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServiceSalle2 implements ISalle<salleee> {
+public class ServiceSalle2 implements Services.ISalle<salleee> {
 
     private Connection connection;
 

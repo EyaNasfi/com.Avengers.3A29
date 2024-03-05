@@ -172,7 +172,13 @@ reclamationservice rs=new reclamationservice();
     public void verspageadus(javafx.event.ActionEvent event) {
     }
 
-    public void equipement(javafx.event.ActionEvent event) {
+    public void equipement(javafx.event.ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/EquipementManagement.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
     }
 
     public void club(javafx.event.ActionEvent event) {

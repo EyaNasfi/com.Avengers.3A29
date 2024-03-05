@@ -185,7 +185,8 @@ public int sc;
     public void profil(ActionEvent event) {
     }
 
-    public void salles(ActionEvent event) {
+    public void salles(ActionEvent event) throws IOException {
+
     }
 
     public void formation(ActionEvent event) {

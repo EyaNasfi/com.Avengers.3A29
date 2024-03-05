@@ -3,7 +3,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 import models.Reclamation;
-import utils.mydb;
+import utils.MyDB;
 
 import java.sql.*;
 
@@ -11,7 +11,7 @@ public class reclamationservice implements  IService<Reclamation> {
     private Connection connection;
 
     public reclamationservice() {
-        connection = mydb.getInstance().getCnx();
+        connection = MyDB.getInstance().getConnection();
     }
 
 
