@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class projetpi {
 
-    private final String URL = "jdbc:mysql://localhost:3306/projetpi";
+    private final String URL = "jdbc:mysql://localhost:3306/pi_avengers";
     private final String USER = "root";
     private final String PASSWORD = "";
     private Connection connection;

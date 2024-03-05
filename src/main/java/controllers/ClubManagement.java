@@ -1,5 +1,10 @@
 package controllers;
 
+
+import javax.mail.*;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,9 +19,13 @@ import javafx.stage.Stage;
 import models.Club;
 import services.ClubService;
 
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Properties;
 
 public class ClubManagement {
 
@@ -32,6 +41,9 @@ public class ClubManagement {
 
     @FXML
     private Button afficher;
+
+    @FXML
+    private TextField searchTextField;
     @FXML
     void event(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/EventMangement.fxml"));
@@ -107,6 +119,7 @@ public class ClubManagement {
         try {
             // Ajouter le nouveau club à la base de données
             clubService.add(newClub);
+            sendConfirmationEmail(String.valueOf(email));
             showAlert("Club ajouté", "Le club a été ajouté avec succès.");
             clearFields();
         } catch (SQLException e) {
@@ -265,6 +278,103 @@ public class ClubManagement {
         }
     }
 
+    @FXML
+    void search(ActionEvent actionEvent) {
+
+        String searchTerm = searchTextField.getText().trim().toLowerCase();
+
+        if (searchTerm.isEmpty()) {
+            afficher(actionEvent);  // Utilisez votre méthode d'affichage par défaut pour restaurer les données initiales
+            return;
+        }
+
+        ObservableList<String> allSalleStrings = clubListView.getItems();
+        ObservableList<String> searchResults = FXCollections.observableArrayList();
+
+        for (String salleString : allSalleStrings) {
+            if (salleString.toLowerCase().contains(searchTerm)) {
+                searchResults.add(salleString);
+            }
+        }
+
+        clubListView.getItems().clear();
+        clubListView.setItems(searchResults);
+    }
+    @FXML
+    void sendConfirmationEmail(String s) {
+        String recipientEmail = email.getText().trim(); // Extract the email address from the TextField
+
+        // Check if the email address is empty
+        if (recipientEmail.isEmpty()) {
+            showAlert("Erreur", "Veuillez saisir une adresse e-mail.");
+            return;
+        }
+
+        // Configure the mail server properties
+        Properties properties = new Properties();
+        properties.put("mail.smtp.host", "smtp.office365.com");
+        properties.put("mail.smtp.port", "587");
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.enable", "true");
+
+        // Configure the sending account
+        String senderEmail = "cherif.benhassine@esprit.tn";
+        String password = "Achraf2006+"; // Replace "actual_password" with the real password
+
+        // Create a mail session with authentication
+        Session session = javax.mail.Session.getInstance(properties, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(senderEmail, password);
+            }
+        });
+
+        try {
+            // Create a message
+            MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(senderEmail));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipientEmail.trim())); // Trim the recipient email address
+            message.setSubject("Confirmation de réservation");
+            message.setText("bienvenu avec nous .");
+
+            // Send the message
+            Transport.send(message);
+            System.out.println("E-mail de confirmation envoyé avec succès !");
+
+            // Show an alert dialog
+            showAlert("Confirmation", "E-mail de confirmation envoyé avec succès !");
+        } catch (MessagingException e) {
+            System.out.println("Erreur lors de l'envoi de l'e-mail de confirmation : " + e.getMessage());
+            // Show an alert dialog in case of an error
+            showAlert("Erreur", "Erreur lors de l'envoi de l'e-mail de confirmation : " + e.getMessage());
+        }
+    }
+
+
+
+    @FXML
+    void sort(ActionEvent actionEvent) {
+        try {
+            // Récupérer la liste des clubs depuis le service
+            List<Club> clubs = clubService.afficher();
+
+            // Trier les clubs par nom
+            clubs.sort(Comparator.comparing(Club::getNameclub));
+
+            // Effacer les éléments actuels de la ListView
+            clubListView.getItems().clear();
+
+            // Ajouter les clubs triés à la ListView
+            for (Club club : clubs) {
+                String displayString = "ID: " + club.getIdclub() + ", Nom: " + club.getNameclub() + ", Email: " + club.getEmail() + ", Numéro de téléphone: " + club.getNumtlf();
+                clubListView.getItems().add(displayString);
+            }
+        } catch (SQLException e) {
+            showAlert("Erreur", "Une erreur s'est produite lors du tri des clubs: " + e.getMessage());
+        }
+    }
+
+
 
     public void numtlf(ActionEvent actionEvent) {
     }
@@ -276,5 +386,32 @@ public class ClubManagement {
     }
 
     public void nameclub(ActionEvent actionEvent) {
+    }
+
+    public void quiz(ActionEvent actionEvent) {
+    }
+
+    public void reclama(ActionEvent actionEvent) {
+    }
+
+    public void formations(ActionEvent actionEvent) {
+    }
+
+    public void cours(ActionEvent actionEvent) {
+    }
+
+    public void salle(ActionEvent actionEvent) {
+    }
+
+    public void remise(ActionEvent actionEvent) {
+    }
+
+    public void club(ActionEvent actionEvent) {
+    }
+
+    public void equipement(ActionEvent actionEvent) {
+    }
+
+    public void verspageadus(ActionEvent actionEvent) {
     }
 }

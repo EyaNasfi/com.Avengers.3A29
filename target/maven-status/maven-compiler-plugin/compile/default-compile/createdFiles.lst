@@ -1,5 +1,7 @@
 models\Club.class
-controllers\ClubManagement.class
+controllers\ClubManagement$1.class
 services\ClubService.class
+controllers\EventListView.class
 services\Crudc.class
 test\MainFX.class
+controllers\ClubManagement.class

@@ -21,30 +21,60 @@
             <Font size="18.0" />
           </font>
         </Label>
-            <Pane layoutX="1.0" layoutY="1.0" prefHeight="406.0" prefWidth="653.0" style="-fx-background-color: A5D6FF;">
+            <Pane layoutX="-1.0" prefHeight="593.0" prefWidth="824.0" style="-fx-background-color: A5D6FF;">
                <children>
-                  <Label layoutX="225.0" layoutY="76.0" text="nom de l'evennement:" />
-                  <Label layoutX="227.0" layoutY="116.0" text="date de l'evennement" />
-                  <Label layoutX="228.0" layoutY="148.0" text="lieu de l'evennement" />
-                  <Label layoutX="227.0" layoutY="184.0" text="l'heures de l'evennement" />
-                  <Label layoutX="196.0" layoutY="17.0" prefHeight="17.0" prefWidth="233.0" text="Ajouter un evennement" textFill="#151c5c">
+                  <Label layoutX="337.0" layoutY="75.0" text="nom de l'evennement:" />
+                  <Label layoutX="335.0" layoutY="109.0" text="date de l'evennement" />
+                  <Label layoutX="337.0" layoutY="149.0" text="lieu de l'evennement" />
+                  <Label layoutX="326.0" layoutY="187.0" text="l'heures de l'evennement" />
+                  <Label layoutX="356.0" layoutY="38.0" prefHeight="17.0" prefWidth="233.0" text="Ajouter un evennement" textFill="#151c5c">
                      <font>
                         <Font name="Berlin Sans FB" size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="heure" layoutX="363.0" layoutY="180.0" prefHeight="22.0" prefWidth="111.0" style="-fx-background-radius: 20;" />
-                  <DatePicker fx:id="date" layoutX="358.0" layoutY="115.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="143.0" style="-fx-background-radius: 20;" />
-                  <Button layoutX="14.0" layoutY="247.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ajouter" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="ajouter" />
-                  <TextField fx:id="nom" layoutX="363.0" layoutY="72.0" prefHeight="22.0" prefWidth="111.0" style="-fx-background-radius: 20;" />
-                  <TextField fx:id="lieu" layoutX="364.0" layoutY="144.0" prefHeight="22.0" prefWidth="111.0" style="-fx-background-radius: 20;" />
-
-                  <Button layoutX="105.0" layoutY="291.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#supprimer" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="supprimer" />
-                  <Button layoutX="105.0" layoutY="247.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#afficher" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="afficher" />
-                  <ListView fx:id="eventlistview" layoutX="202.0" layoutY="217.0" prefHeight="174.0" prefWidth="439.0" />
-                     <Button fx:id="modifier" layoutX="14.0" layoutY="291.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#modifier" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="modifier" />
-                     <Button layoutX="515.0" layoutY="176.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#club" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="club" />
+                  <TextField fx:id="heure" layoutX="464.0" layoutY="183.0" prefHeight="22.0" prefWidth="111.0" style="-fx-background-radius: 20;" />
+                  <DatePicker fx:id="date" layoutX="464.0" layoutY="107.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="143.0" style="-fx-background-radius: 20;" />
+                  <Button layoutX="408.0" layoutY="306.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ajouter" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="ajouter" />
+                  <TextField fx:id="nom" layoutX="464.0" layoutY="71.0" prefHeight="22.0" prefWidth="111.0" style="-fx-background-radius: 20;" />
+                  <TextField fx:id="lieu" layoutX="464.0" layoutY="145.0" prefHeight="22.0" prefWidth="111.0" style="-fx-background-radius: 20;" />
+            
+                  <Button layoutX="520.0" layoutY="306.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#supprimer" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="supprimer" />
+                  <Button layoutX="296.0" layoutY="306.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#afficher" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="afficher" />
+                  <ListView fx:id="eventlistview" layoutX="514.0" layoutY="354.0" prefHeight="110.0" prefWidth="210.0" />
+                     <Button fx:id="modifier" layoutX="619.0" layoutY="306.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#modifier" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="modifier" />
+                     <TextField fx:id="iduser" layoutX="465.0" layoutY="226.0" onAction="#iduser" prefHeight="22.0" prefWidth="111.0" style="-fx-background-radius: 20;" />
+                     <TextField fx:id="idclub" layoutX="465.0" layoutY="271.0" onAction="#idclub" prefHeight="22.0" prefWidth="111.0" style="-fx-background-radius: 20;" />
+                     <Label layoutX="326.0" layoutY="233.0" text="id user" />
+                     <Label layoutX="326.0" layoutY="275.0" text="id  club" />
+                     <Button fx:id="afficherCalendrier" layoutX="333.0" layoutY="392.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#afficherCalendrier" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 20; -fx-background-color: #6495ED;" text="afficher calandrier" />
+                     <Button layoutX="330.0" layoutY="502.0" mnemonicParsing="false" onAction="#vueetudiant" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="affichage pour etudiant" />
                </children>
             </Pane>
+               <Pane prefHeight="594.0" prefWidth="218.0" style="-fx-background-color: #6495ED;" />
+               <Label layoutX="227.0" layoutY="146.0" />
+               <Button layoutX="21.0" layoutY="109.0" mnemonicParsing="false" onAction="#quiz" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 20;" text="Gestion quiz" />
+               <Label layoutX="22.0" layoutY="48.0" prefHeight="11.0" prefWidth="81.0" text="9ariny-Academy" textFill="#151c5c">
+                  <font>
+                     <Font name="Arial" size="7.0" />
+                  </font>
+               </Label>
+               <Label layoutX="88.0" layoutY="85.0" text="Nasfi Eya" />
+               <Button layoutX="21.0" layoutY="305.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Liste des paiements" />
+               <Button layoutX="21.0" layoutY="148.0" mnemonicParsing="false" onAction="#reclama" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestion reclamations" />
+               <Button layoutX="21.0" layoutY="186.0" mnemonicParsing="false" onAction="#event" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestions events" />
+               <Button layoutX="21.0" layoutY="226.0" mnemonicParsing="false" onAction="#formations" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestions Formations" />
+               <Button layoutX="20.0" layoutY="265.0" mnemonicParsing="false" onAction="#cours" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestions Cours" />
+               <Button layoutX="20.0" layoutY="346.0" mnemonicParsing="false" onAction="#remise" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestions des remises" />
+               <Button layoutX="21.0" layoutY="385.0" mnemonicParsing="false" onAction="#salle" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestions des salles" />
+               <Button layoutX="20.0" layoutY="425.0" mnemonicParsing="false" onAction="#club" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Gestions Clubs" />
+               <Button layoutX="20.0" layoutY="464.0" mnemonicParsing="false" onAction="#equipement" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="Equipements" />
+               <Button layoutX="21.0" layoutY="504.0" mnemonicParsing="false" onAction="#verspageadus" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="affichage users" />
+               <Button cancelButton="true" defaultButton="true" layoutX="4.0" layoutY="557.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #87CEFA#87CEFA; -fx-background-radius: 20;" text="    Déconnecté" textAlignment="RIGHT" wrapText="true" />
+               <Label layoutX="133.0" layoutY="581.0" prefHeight="11.0" prefWidth="81.0" text="Bienvenue etudiant" textFill="#151c5c">
+                  <font>
+                     <Font name="Arial" size="9.0" />
+                  </font>
+               </Label>
       </children>
     </AnchorPane>
   </children>

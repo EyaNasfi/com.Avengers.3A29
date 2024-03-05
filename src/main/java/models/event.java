@@ -1,4 +1,3 @@
-
 package models;
 
 import java.time.LocalDate;
@@ -10,28 +9,26 @@ public class event {
     private String name;
     private LocalDate date;
     private LocalTime heure;
-// syrine
+    private int idClub;
+    private int idUser;
 
-    public event(String nameValue, String lieuValue){
-        this.name=nameValue;
-        this.lieu=lieuValue;
-
+    public event(String nameValue, String lieuValue) {
+        this.name = nameValue;
+        this.lieu = lieuValue;
     }
 
     public event() {
-        this.id = id;
-        this.lieu = lieu;
-        this.name = name;
-        this.date = date;
-        this.heure = heure;
+        // Initialiser les attributs à des valeurs par défaut si nécessaire
     }
-public event(String nameValue, String lieuValue, LocalDate dateValue, LocalTime timeValue){
-        this.name=nameValue;
-        this.lieu=lieuValue;
-        this.date=dateValue;
-        this.heure=timeValue;
-}
 
+    public event(String nameValue, String lieuValue, LocalDate dateValue, LocalTime timeValue, int idClub, int idUser) {
+        this.name = nameValue;
+        this.lieu = lieuValue;
+        this.date = dateValue;
+        this.heure = timeValue;
+        this.idClub = idClub;
+        this.idUser = idUser;
+    }
 
     public String getLieu() {
         return lieu;
@@ -73,17 +70,31 @@ public event(String nameValue, String lieuValue, LocalDate dateValue, LocalTime 
         this.name = name;
     }
 
+    public int getIdClub() {
+        return idClub;
+    }
+
+    public void setIdClub(int idClub) {
+        this.idClub = idClub;
+    }
+
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
+    }
 
     @Override
     public String toString() {
-        return "event{" +
-                "id=" + id +
-                ", lieu='" + lieu + '\'' +
-                ", name='" + name + '\'' +
-                ", date=" + date +
-                ", heure=" + heure +
-                '}';
+        return
+                "\tlieu='" + lieu +
+                "\tname='" + name +
+                "\tdate=" + date +
+                "\theure=" + heure +
+                "\tidClub=" + 1 +
+                "\tidUser=" + 1 +"\n";
+
     }
 }
-
-

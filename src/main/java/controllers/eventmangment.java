@@ -9,6 +9,8 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
+import javafx.beans.Observable;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -22,7 +24,8 @@ import java.util.List;
 import javafx.stage.Stage;
 import models.event;
 
-
+import java.util.Map;
+import java.util.HashMap;
 import services.eventservice;
 
 public class eventmangment {
@@ -43,7 +46,7 @@ public class eventmangment {
     private Button afficher;
 
     @FXML
-    private ListView<String> eventlistview;
+    private ListView<event> eventlistview;
 
     @FXML
     private DatePicker date;
@@ -59,6 +62,11 @@ public class eventmangment {
 
     @FXML
     private TextField nom;
+    @FXML
+    private TextField idclub;
+
+    @FXML
+    private TextField iduser;
 
     private eventservice services;
 
@@ -66,6 +74,16 @@ public class eventmangment {
     @FXML
     void club(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/ClubMangement.fxml"));
+        Parent root = loader.load();
+        Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        st.setScene(scene);
+        st.show();
+
+    }
+    @FXML
+    void vueetudiant(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/interface etudiant.fxml"));
         Parent root = loader.load();
         Stage st = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
@@ -86,9 +104,11 @@ public class eventmangment {
         String lieuValue = lieu.getText();
         LocalDate dateValue = date.getValue();
         String heureValue = heure.getText();
+        int idUserValue = Integer.parseInt(iduser.getText()); // Ajout
+        int idClubValue = Integer.parseInt(idclub.getText()); // Ajout
 
         // Vérifier que tous les champs sont remplis
-        if (nomValue.isEmpty() || lieuValue.isEmpty() || dateValue == null || heureValue.isEmpty()) {
+        if (nomValue.isEmpty() || lieuValue.isEmpty() || dateValue == null || heureValue.isEmpty() || idUserValue == 0 || idClubValue == 0) {
             showAlert("Erreur", "Veuillez remplir tous les champs.");
             return;
         }
@@ -103,13 +123,12 @@ public class eventmangment {
         LocalTime timeValue = LocalTime.parse(heureValue);
 
         // Créer un nouvel objet event avec les valeurs saisies
-        event nouvelEvent = new event(nomValue, lieuValue, dateValue, timeValue);
+        event nouvelEvent = new event(nomValue, lieuValue, dateValue, timeValue, idUserValue, idClubValue); // Ajout des paramètres
 
         try {
             // Ajouter le nouvel événement à la base de données en utilisant l'eventservice
             es.add(nouvelEvent);
             showAlert("event ajouté", "L'event a été ajouté avec succès.");
-
 
             // Vous pouvez ajouter une logique supplémentaire ici en fonction de vos besoins
 
@@ -118,6 +137,8 @@ public class eventmangment {
             // Gérer l'exception en fonction de vos besoins
         }
     }
+
+
 
     private event findeventbyId(int id) {
         try {
@@ -136,10 +157,10 @@ public class eventmangment {
     @FXML
     void modifier(ActionEvent event) {
         // Get the selected event object from the ListView
-        String selectedItem = eventlistview.getSelectionModel().getSelectedItem();
+        event selectedItem = eventlistview.getSelectionModel().getSelectedItem();
         if (selectedItem != null) {
             // Parse the ID from the selected item
-            int eventId = parseIdFromSelectedItem(selectedItem);
+            int eventId = selectedItem.getId();
             // Check if eventId is a valid integer
             if (eventId != -1) {
                 try {
@@ -151,6 +172,8 @@ public class eventmangment {
                         String newLocation = lieu.getText();
                         LocalDate newDate = date.getValue();
                         String newTime = heure.getText();
+                        int newIdUser = Integer.parseInt(iduser.getText()); // Ajout
+                        int newIdClub = Integer.parseInt(idclub.getText()); // Ajout
 
                         // Convert newTime to LocalTime
                         LocalTime newTimeValue = LocalTime.parse(newTime);
@@ -160,6 +183,8 @@ public class eventmangment {
                         eventToModify.setLieu(newLocation);
                         eventToModify.setDate(newDate);
                         eventToModify.setHeure(newTimeValue);
+                        eventToModify.setIdUser(newIdUser); // Ajout
+                        eventToModify.setIdClub(newIdClub); // Ajout
 
                         // Call the modifier method in EventService to update the database
                         es.modifier(eventToModify);
@@ -185,10 +210,10 @@ public class eventmangment {
     @FXML
     void supprimer(ActionEvent event) {
         // Get the selected event object from the ListView
-        String selectedItem = eventlistview.getSelectionModel().getSelectedItem();
+        event selectedItem = eventlistview.getSelectionModel().getSelectedItem();
         if (selectedItem != null) {
             // Parse the ID from the selected item
-            int eventId = parseIdFromSelectedItem(selectedItem);
+            int eventId = selectedItem.getId();
 
             // Check if eventId is a valid integer
             if (eventId != -1) {
@@ -292,22 +317,90 @@ public class eventmangment {
     @FXML
     void afficher(ActionEvent event) {
         try {
-            List<event> events = es.afficher();
+            ObservableList<event> events = es.getAll();
 
             // Clear any existing items in the ListView
-            eventlistview.getItems().clear();
+          ///  eventlistview.getItems().clear();
 
             // Add each event object to the ListView with a custom string representation
-            for (event eventt : events) {
+            //for (event eventt : events) {
                 // Personnalisez la représentation de chaîne pour l'événement
-                String displayString = "ID: " + eventt.getId() + ", Nom de l'événement: " + eventt.getName() + ", Lieu: " + eventt.getLieu() + ", Date: " + eventt.getDate() + ", Heure: " + eventt.getHeure();
-
                 // Ajouter la représentation de chaîne à la ListView
-                eventlistview.getItems().add(displayString);
-            }
+                eventlistview.setItems(events);
+           // }
         } catch (SQLException e) {
             System.out.println("Erreur lors de l'affichage des événements: " + e.getMessage());
         }
+    }
+    @FXML
+    void afficherCalendrier(ActionEvent event) {
+        try {
+            // Récupérer tous les événements depuis la base de données
+            List<event> events = es.afficher();
+
+            // Créer une structure de données pour organiser les événements par date
+            Map<LocalDate, StringBuilder> calendarMap = new HashMap<>();
+
+            // Parcourir les événements et les organiser par date dans la structure de données
+            for (event eventt : events) {
+                LocalDate eventDate = eventt.getDate();
+                StringBuilder eventStringBuilder = calendarMap.getOrDefault(eventDate, new StringBuilder());
+                eventStringBuilder.append(eventt.getName()).append("\n");
+                calendarMap.put(eventDate, eventStringBuilder);
+            }
+
+            // Construire une chaîne de caractères représentant le calendrier
+            StringBuilder calendarStringBuilder = new StringBuilder();
+            for (Map.Entry<LocalDate, StringBuilder> entry : calendarMap.entrySet()) {
+                LocalDate date = entry.getKey();
+                String formattedDate = date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                calendarStringBuilder.append(formattedDate).append(":\n");
+                calendarStringBuilder.append(entry.getValue()).append("\n");
+            }
+
+            // Afficher le calendrier dans une boîte de dialogue
+            showAlert("Calendrier des événements", calendarStringBuilder.toString());
+
+        } catch (SQLException e) {
+            System.out.println("Erreur lors de la récupération des événements: " + e.getMessage());
+        }
+    }
+
+
+
+
+
+    public void iduser(ActionEvent actionEvent) {
+    }
+
+    public void idclub(ActionEvent actionEvent) {
+    }
+
+    public void quiz(ActionEvent actionEvent) {
+    }
+
+    public void reclama(ActionEvent actionEvent) {
+    }
+
+    public void event(ActionEvent actionEvent) {
+    }
+
+    public void formations(ActionEvent actionEvent) {
+    }
+
+    public void cours(ActionEvent actionEvent) {
+    }
+
+    public void remise(ActionEvent actionEvent) {
+    }
+
+    public void salle(ActionEvent actionEvent) {
+    }
+
+    public void equipement(ActionEvent actionEvent) {
+    }
+
+    public void verspageadus(ActionEvent actionEvent) {
     }
 
 

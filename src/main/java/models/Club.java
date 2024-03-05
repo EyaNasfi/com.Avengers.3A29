@@ -64,12 +64,11 @@ public class Club {
 
     @Override
     public String toString() {
-        return "club{" +
-                "idclub=" + idclub +
-                ", iduser=" + iduser +
-                ", nameclub='" + nameclub + '\'' +
-                ", email='" + email + '\'' +
-                ", numtlf=" + numtlf +
-                '}';
+        return
+                "\tiduser=" + iduser +
+                "\tnameclub='" + nameclub + '\'' +
+                "\temail='" + email + '\'' +
+                "\tnumtlf=" + numtlf +"\n";
+
     }
 }
