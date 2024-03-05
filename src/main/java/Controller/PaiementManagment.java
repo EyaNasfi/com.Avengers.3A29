@@ -139,7 +139,7 @@ public class PaiementManagment {
 
 //Stripe api
     @FXML
-    private void ajouter(){
+    private void ajouter() {
         try {
             showAlert("Payment successful.");
 // Set your secret key here
