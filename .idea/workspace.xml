@@ -5,42 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94583e90-3604-42d9-92a0-81b12649a9ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Paiement_1709566098393.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Paiement_1709566240963.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Paiement_1709568448314.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Paiement_1709569688966.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Paiement_1709581268892.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Paiement_1709585967987.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Paiement_1709586158777.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/EmailSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/eemail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/Mainadmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/Mainadmini.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/Aadmin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/admin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/email.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/etudiant.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/429511356_314309851656071_1715721751443100459_n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test/images/7422080.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaiementManagment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/RemiseManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/RemiseManagment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/affichage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/affichage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test/affiche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/affiche.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test/remise.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/remise.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/PaiementManagment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/PaiementManagment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/RemiseManagment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/RemiseManagment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/affichage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/affichage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/affiche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/affiche.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/remise.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/remise.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "paiement",
+    "git-widget-placeholder": "gestionpayerremise",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/LENOVO/IdeaProjects/exampleproject",
     "node.js.detected.package.eslint": "true",
