@@ -1,42 +1,63 @@
-<<<<<<< HEAD
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Util\MyDB.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\entity\Paiement.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\module-info.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\IPaiement.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\ServicePaiement.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\test\MainFX.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\entity\Remise.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\affichage.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\ServciceRemise.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\PaiementManagment.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\RemiseManagment.java
-C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\test\main.java
-=======
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\quizservice.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\Payment.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\questionservice.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\Questions.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\utils\mydb.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\ItemRecController.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\Admin.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\entities\salleee.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\EquipementManagement.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\controllers\inscritController.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\utils\MyDB.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\controllers\GestionUser.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\affichage.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\ContactController.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\Itemq.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\IEquipement.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\ServciceRemise.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\test\Mainadmini.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\utils\MyDatabase.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\eemail.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\BadWordFilterService.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\ServicePaiement.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\affquestions.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\quiz.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\test\MainFX.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\Reponses.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\reclamationservice.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Util\MyDB.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\Reclamation.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\quiz.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\ajouterreclamation.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\quizcontroller.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\models\User.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\popupC.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\questions.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\SalleManagement.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\ISalle.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\test\Mainadmin.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\popupppC.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\ServiceSalle2.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\controllers\SuppfronController.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\services\IServices.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\quizservice.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\services\UserService.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\module-info.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\Questions.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\entity\Paiement.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\RemiseManagment.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\ItemRecController.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\ServiceEquipement.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\controllers\AfficherUsers.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\EmailSender.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\Itemq.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\controllers\frontController.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\quiz.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\test\MainFX.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\test\HelloApplication.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\models\Reponses.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\reclamationservice.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\test\Main.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\test\main.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\entities\equipement.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\itemrecControlleradmin.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\reponseservice.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\tn\esprit\crud\controllers\login.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\affreclamationreponseC.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\reclamationreponseC.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\popupC.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\PaiementManagment.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\interfacequest.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\questions.java
-C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\popupppC.java
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\entity\Remise.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\IService.java
->>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\IPaiement.java

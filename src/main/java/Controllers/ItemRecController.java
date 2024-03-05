@@ -1,8 +1,6 @@
 package Controllers;
 
 import Services.questionservice;
-import com.google.cloud.texttospeech.v1.*;
-import com.google.protobuf.ByteString;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,15 +15,10 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import models.Questions;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.sql.SQLException;
-import java.util.EventObject;
 import java.util.HashMap;
 import java.util.Map;
-
-import static java.lang.String.valueOf;
 
 public class ItemRecController {
 
