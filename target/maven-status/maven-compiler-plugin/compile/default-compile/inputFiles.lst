@@ -1,4 +1,36 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\services\crud.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\services\eventservice.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\test\MainFX.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\utils\projetpi.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\services\ClubService.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\controllers\EventListView.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\test\Main.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\controllers\ClubManagement.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\services\Crudc.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\models\Club.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\models\event.java
+C:\Users\Amine\Desktop\workshopPidev2324-workshopJDBC\src\main\java\controllers\eventmangment.java
+=======
+<<<<<<< HEAD
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Util\MyDB.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\entity\Paiement.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\module-info.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\IPaiement.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\ServicePaiement.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\test\MainFX.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\entity\Remise.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\affichage.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\services\ServciceRemise.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\PaiementManagment.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\Controller\RemiseManagment.java
+C:\Users\LENOVO\IdeaProjects\Avangers\src\main\java\test\main.java
+=======
+C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\quizservice.java
+=======
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\Payment.java
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\questionservice.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\Admin.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\entities\salleee.java
@@ -60,4 +92,9 @@ C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controller\PaiementManagmen
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Controllers\interfacequest.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\entity\Remise.java
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\IService.java
+<<<<<<< HEAD
+>>>>>>> 51081faf48ce072297e4ec47b84ec88930bae1bc
+>>>>>>> b54136c8f2dad0583e8b43ddb2e1a1e1886781ac
+=======
 C:\Users\Eya\IdeaProjects\quiz gestion\src\main\java\Services\IPaiement.java
+>>>>>>> e0ea2413d1c2bb52bcfdbfe3f82821d89fa66793
